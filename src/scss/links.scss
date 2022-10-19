@@ -1,0 +1,92 @@
+.links {
+    padding: 40px 0px;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 75, 50, 1);
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+        @media(max-width:992px) {
+            flex-wrap: wrap;
+            row-gap: 65px;
+        }
+        @media(max-width:767px) {
+            gap: 15px;
+            row-gap: 50px;
+        }
+        @media(max-width:600px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        flex: 0 1 calc(33% - 10px);
+        
+        @media(max-width:992px) {
+            flex: 0 1 calc(50% - 15px);
+        }
+        @media(max-width:767px) {
+            flex: 0 1 calc(50% - 7.5px);
+        }
+        @media(max-width:600px) {
+            margin-bottom: 60px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.link-item {
+    background: #EBF1FB;
+    border-radius: 0px 12px 12px 12px;
+    position: relative;
+
+    &__image {
+        position: relative;
+        padding-bottom: 50%;
+        border-radius: 12px;
+        img {
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__top{
+        position: absolute;
+        top: -32px;
+        left: 0;
+    }
+
+    &__content {
+        padding: 15px 15px 35px 15px;
+    }
+
+    &__label {
+        margin-bottom: 15px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        color: $blue;
+        // display: block;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,144 @@
+.profile-options {
+    padding: 20px 0px;
+
+    &__container {
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        background: #EBF1FB;
+        border-radius: 23px;
+        padding: 60px;
+        position: relative;
+        @media(max-width:992px) {
+            padding: 30px 25px;
+        }
+        @media(max-width:492px) {
+            padding: 30px 15px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__content {}
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 20px;
+        max-width: 650px;
+        @media(max-width:767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        flex: 0 1 300px;
+
+        &:first-child {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 12px;
+            
+        }
+
+        &:last-child {
+            flex: 1 1 100%;
+        }
+        @media(max-width:767px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__avatar {
+        border-radius: 50%;
+
+        img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+    }
+
+    &__field {
+        position: relative;
+    }
+
+    &__label {
+        color: $violet;
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-size: 10px;
+    }
+
+    &__input {
+        height: 50px;
+        width: 100%;
+        padding: 10px 20px 0px 20px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        font-size: 15px;
+        border: 1px solid #fff;
+        transition: all 0.4s ease 0s;
+        &:focus {
+            border: 1px solid $blue;
+            color: $blue;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        display: block;
+        resize: none;
+        padding: 20px;
+        height: 120px;
+        border-radius: 12px;
+        transition: all 0.4s ease 0s;
+        &:focus {
+            border: 1px solid $blue;
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @media(max-width:992px) {
+            top: 30px;
+            right: 25px;
+        }
+    }
+
+    &__button {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        transition: all 0.4s ease 0s;
+        flex: 0 0 35px;
+        svg path {
+            transition: all 0.4s ease 0s;
+        }
+        &:hover {
+            background-color: $blue;
+            svg path {
+                fill: #fff;
+            }
+        }
+    }
+}

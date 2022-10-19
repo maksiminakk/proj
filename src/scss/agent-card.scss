@@ -1,0 +1,120 @@
+.agent-card {
+    padding: 60px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 23px;
+    overflow: hidden;
+    position: relative;
+    &__background {
+        background-image: url(../img/icons/agent-card/background-pc.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        @media(max-width:767px) {
+            background-image: url(../img/icons/agent-card/background.svg);
+        }
+        @media(max-width:420px) {
+            background-image: url(../img/icons/agent-card/background-pc.svg);
+        }
+    }
+    @media(max-width:767px) {
+        padding: 60px 0px 35px 0px;
+    }
+    @media(max-width:492px) {
+        padding: 70px 0px 20px 0px;
+    }
+
+    &__number-of-reviews {
+        position: absolute;
+        background: #F4F8FF;
+        border-radius: 9px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        right: 15px;
+        top: 15px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__text {
+        color: #24CA8E;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media(max-width:767px) {
+            padding: 0px 15px;
+            width: 100%;
+        }
+    }
+
+    &__avatar {
+        margin-bottom: 10px;
+    }
+
+    &__rating {
+        background: #EBF1FB;
+        border-radius: 9px;
+        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    &__number-of-rating {
+        margin-right: 5px;
+    }
+
+    &__stars {
+    }
+
+    &__name {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__speciality {
+        color: $violet;
+        margin-bottom: 12px;
+    }
+
+    &__visit {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        @media(max-width:1150px) {
+            flex-direction: column;
+        }
+        @media(max-width:767px) {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        width: 140px;
+        padding: 18px 30px;
+        @media(max-width:1150px) {
+            width: 100%;
+            display: flex;
+        }
+    }
+}

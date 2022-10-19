@@ -1,0 +1,249 @@
+<div class="calculator-page">
+    <div class="calculator-page__container container">
+        <h1 class="calculator-page__title subtitle">
+            Ипотечный калькулятор
+        </h1>
+        <div class="calculator-page__label">
+            Рассчитать платеж по кредиту и получить одобрение
+        </div>
+        <div class="calculator-page__body">
+            <div class="calculator-page__row calculator-page__row_calculator">
+                <div class="calculator-page__item">
+                    <div class="object-info__calculator calculator">
+                        <div class="calculator__top object-info__top">
+                            <h3 class="calculator__title subtitle">
+                                Рассчитайте ипотеку
+                            </h3>
+                        </div>
+                        <div class="calculator__content">
+                            <div class="calculator__row">
+                                <div class="calculator__item">
+                                    <div class="calculator__label">
+                                        Срок кредита
+                                    </div>
+                                    <div class="calculator__body">
+                                        <div class="buyer-filter__inputs calculator__inputs ">
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label "> От</span>
+                                                <input type="number" min="1" max="30" placeholder="5"
+                                                    class="buyer-filter__input" value="" id="input-0-credit">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label ">До</span>
+                                                <input type="number" min="5" max="30" placeholder="20"
+                                                    class="buyer-filter__input" id="input-1-credit">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                            
+                                        </div>
+                                        <div class="buyer-filter__slider" id="range-slider-credit"></div>
+                                    </div>
+                                </div>
+                                <div class="calculator__item">
+                                    <div class="calculator__label">
+                                        Первоначальный взнос
+                                    </div>
+                                    <div class="calculator__body">
+                                        <div class="buyer-filter__inputs">
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label ">от</span>
+                                                <input type="number" min="400000" max="5000000" placeholder="400000"
+                                                    class="buyer-filter__input" value="" id="input-0-contribution">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label ">до</span>
+                                                <input type="number" min="400000" max="5000000" placeholder="1500000"
+                                                    class="buyer-filter__input" id="input-1-contribution">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                        </div>
+                                        <div class="buyer-filter__slider" id="range-slider-contribution"></div>
+                                    </div>
+                                </div>
+                                <div class="calculator__item">
+                                    <div class="calculator__label">
+                                        Стоимость объекта
+                                    </div>
+                                    <div class="calculator__body">
+                                        <div class="calculator__input">
+                                            <input value="2 999 000" type="text">
+                                        </div>
+                                    </div>
+                                   
+
+                                </div>
+                                <div class="calculator__item">
+                                    <div class="calculator__label">
+                                        Процентная ставка
+                                    </div>
+                                    <div class="calculator__body">
+                                        <div class="calculator__input">
+                                            <input value="11%" type="text">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="calculator__item">
+                                    <a href="" class="calculator__button button button_white">График платежей</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-page__item">
+                    <div class="calculator-page__panel">
+                        <div class="calculator-page__subtitle subtitle">
+                            <span>Ежемесячный платеж</span>
+                            19 000
+                        </div>
+                        <div class="calculator-page__labels">
+                            <div class="calculator-page__sublabel">
+                                <span>Сумма кредита</span>
+                                2 897 000
+                            </div>
+                            <div class="calculator-page__sublabel">
+                                <span>Процентная ставка</span>
+                                10,8%
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-page__buttons">
+                            <a href="" class="calculator-page__button button">Получить одобрение</a>
+                            <a href="" class="calculator-page__button button button_white">Видео консультация</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator-page__row">
+                <div class="calculator-page__item" style="flex: 1 1 100%;">
+                    <div class="calculator-page__top">
+                        <h2 class="calculator-page__title subtitle">
+                            Подходящая под ежемесячный платеж недвижимость
+                        </h2>
+                        <div class="calculator-page__nav">
+                            <div class="calculator-page__point _active">
+                                Вторичка
+                            </div>
+                            <div class="calculator-page__point ">
+                                Новостройки
+                            </div>
+                            <div class="calculator-page__point ">
+                                Дома,коттеджи,дачи
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-page__content">
+                        <div id="map" class="calculator-page__map map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="stocks__body">
+                <div class="stocks__top">
+                    <div class="stocks__left">
+                        <h2 class="stocks__title subtitle">
+                            Акции
+                        </h2>
+                    </div>
+    
+                    <div class="stocks__right">
+                        <div class="stocks__label">
+                            Еще акции
+                        </div>
+                        <div class="stocks__buttons">
+                            <div class="stocks__slider-button stocks__slider-button-prev new-buildings__slider-button _tr">
+    
+                            </div>
+                            <div class="stocks__slider-button stocks__slider-button-next new-buildings__slider-button _tr">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stocks__content">
+                    <div class="stocks__slider swiper">
+                        <div class="stocks__wrapper swiper-wrapper">
+                            <div class="stocks__slide stocks__item swiper-slide stock-item">
+                                <div class="stock-item__body">
+                                    <div class="stock-item__content">
+                                        <h3 class="stock-item__title">
+                                            Успейте взять ипотеку
+                                            по выгодной ставке
+                                        </h3>
+                                        <div class="stock-item__text">
+                                            Специальные предложения
+                                            этой весны от 11% на новостройки
+                                        </div>
+                                        <a href="" class="stock-item__button button button_white">
+                                            Смотреть предложения
+                                        </a>
+                                    </div>
+                                    <div class="stock-item__image">
+                                        <img src="@img/stock-item/house.png" alt="">
+                                    </div>
+                                    <div class="stock-item__image-svg">
+                                        <img src="@img/stock-item/flower.svg" alt="">
+                                    </div>
+                                    <div class="stock-item__number">
+                                        -11%
+                                    </div>
+                                    <div class="stock-item__elipse-small">
+        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="stocks__slide stocks__item swiper-slide stock-item stock-item_gray">
+                                <div class="stock-item__body">
+                                    <div class="stock-item__content">
+                                        <h3 class="stock-item__title">
+                                            Семейная ипотека от 2,99%
+                                        </h3>
+                                        <div class="stock-item__text">
+                                            Купите квартиру в ипотеку <br>
+                                            по специальной программе для семей с детьми
+                                        </div>
+                                        <a href="" class="stock-item__button button">
+                                            Смотреть предложения
+                                        </a>
+                                    </div>
+                                    <div class="stock-item__family-image">
+                                        <img src="@img/stock-item/family.png" alt="">
+                                    </div>
+                                    <div class="stock-item__elipse-big">
+        
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="stocks__slide stocks__item swiper-slide stock-item stock-item_gray">
+                                <div class="stock-item__content">
+                                    <h3 class="stock-item__title">
+                                        Семейная ипотека от 2,99%
+                                    </h3>
+                                    <div class="stock-item__text">
+                                        Купите квартиру в ипотеку <br>
+                                        по специальной программе для семей с детьми
+                                    </div>
+                                    <a href="" class="stock-item__button button">
+                                        Смотреть предложения
+                                    </a>
+                                </div>
+                                <div class="stock-item__family-image">
+                                    <img src="@img/stock-item/family.png" alt="">
+                                </div>
+                                <div class="stock-item__elipse-big">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

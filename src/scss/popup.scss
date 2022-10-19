@@ -1,0 +1,217 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    @media(max-width:492px) {
+        background: transparent;
+        backdrop-filter: inherit;
+        padding-top: 40px;
+        z-index: 9;
+        box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &__body {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    &__content {
+        transform: translate(100%, 0%);
+        border-radius: 23px 0px 0px 23px;
+        background-color: #fff;
+        color: #000;
+        width: 420px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+        position: relative;
+        transition: 0.5s;
+        padding: 15px;
+
+        @media(max-width:492px) {
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        &_gray {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: auto;
+            padding: 35px;
+
+            @media(max-width:767px) {
+                padding: 35px 17.5px 35px 17.5px;
+            }
+
+            @media(max-width:492px) {
+                width: 100%;
+            }
+
+            @media(max-width:392px) {
+                padding: 30px 0px;
+                background: #EBF1FB;
+            }
+        }
+    }
+
+    &__close {
+        border-radius: 50%;
+        display: inline-flex;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: #EBF1FB;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @media(max-width:992px) {
+            top: 15px;
+            right: 15px;
+        }
+
+        &_white {
+            background: #fff;
+        }
+    }
+
+    &__account {}
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.popup.open .popup__content {
+    transform: translate(0px, 0px);
+}
+
+.close-popup {}
+
+.account {
+    color: $violet;
+    font-size: 16px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 25px 0px 25px 25px;
+        border-bottom: 1px solid rgba(122, 127, 170, 0.2);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        padding: 25px 0px 0px 25px;
+        color: $black;
+        font-size: 20px;
+    }
+
+    &__avatar {
+        margin-right: 10px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__profile-link {
+        color: $blue;
+        display: block;
+        font-size: 12px;
+    }
+
+    &__name {
+        margin-bottom: 5px;
+    }
+
+
+    &__body {}
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(122, 127, 170, 0.2);
+
+        &:last-child {
+            border: none;
+        }
+
+        li {
+            padding: 25px 0px 0px 25px;
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        margin-right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 30px;
+        border-radius: 50%;
+        background-color: $blue;
+    }
+
+    &__link {
+        color: $violet;
+    }
+}
+
+.popup-map {
+
+    &__body {}
+
+    &__content {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    &__close {
+        z-index: 10;
+        top: 50px;
+        right: 50px;
+    }
+
+    &__content-body {
+        height: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.registration-menu {
+
+    &__title {}
+
+    &__text {}
+
+    &__label {}
+
+    &__line {}
+
+    &__button {}
+}

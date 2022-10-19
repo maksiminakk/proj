@@ -1,0 +1,50 @@
+
+.authorization {
+
+    &__body {
+        padding: 40px 20px 30px 30px;
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+        font-size: 20px;
+    }
+
+    &__text {
+        color: $violet;
+        line-height: 135%;
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__button {
+        padding: 15px;
+        width: 100%;
+    }
+
+    &__lines {
+        display: flex;
+        align-items: center;
+        color: $violet;
+        gap: 10px;
+        &:before {
+            display: block;
+            content: "";
+            background-color: rgba(122, 127, 170, 0.5);
+            height: 1px;
+            width: 100%;
+        }
+        &:after {
+            display: block;
+            content: "";
+            background-color: rgba(122, 127, 170, 0.5);
+            height: 1px;
+            width: 100%;
+        }
+    }
+}

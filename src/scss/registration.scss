@@ -1,0 +1,123 @@
+.registration {
+
+    &__body {
+        padding: 40px 20px 30px 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__text {
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+        color: $violet;
+        line-height: 135%;
+    }
+
+    &__form {}
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__item {
+        position: relative;
+
+        &:first-child {
+            &:before {
+                content: "Фамилия ";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+
+        &:nth-child(2) {
+            &:before {
+                content: "Имя";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+
+        &:nth-child(3) {
+            &:before {
+                content: "Телефон";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+
+        &:nth-child(4) {
+            &:before {
+                content: "WhatsApp";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+
+        &:nth-child(5) {
+            &:before {
+                content: "Пароль";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+
+        &:nth-child(6) {
+            &:before {
+                content: "Повтор пароля";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+    }
+
+    &__input {
+        height: 55px;
+        display: block;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #D5D5D5;
+        border-radius: 12px;
+        padding-left: 20px;
+    }
+
+    &__button {
+        height: 45px;
+        width: 100%;
+    }
+}

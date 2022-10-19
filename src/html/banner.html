@@ -1,0 +1,80 @@
+<div class="banner">
+    <div class="banner__container container">
+        <div class="banner__body">
+            <div class="banner__decor">
+                <img src="@img/banner/decor-01.svg" alt="">
+                <img src="@img/banner/decor-02.svg" alt="">
+            </div>
+            <div class="banner__content">
+                <h1 class="banner__title subtitle">
+                    Современный поиск недвижимости
+                </h1>
+                <div class="banner__panel panel">
+                    <div class="panel__top">
+                        <div class="panel__label">
+                            Недвижимость в <a href="">Краснодаре</a>
+                        </div> 
+                    </div>
+                    <div class="panel__row">
+                        <div class="panel__item">
+                            <div class="buyer-filter__dropdown dropdown">
+                                <div class="dropdown__body">
+                                    <div class="dropdown__content">
+                                        <div class="dropdown__button-body ">
+                                            <span class="dropdown__label">Тип объекта</span>
+                                            <button type="submit"
+                                                class="dropdown__button droplist__button _tr filter-item">
+                                                Квартиры
+                                            </button>
+                                        </div>
+
+                                        <ul class="dropdown__list _tr droplist__list">
+                                            <li class="dropdown__list-item _tr" data-value="one">
+                                                Студии
+                                            </li>
+                                            <li class="dropdown__list-item _tr" data-value="two">
+                                                Квартиры
+                                            </li>
+                                            <li class="dropdown__list-item _tr" data-value="three">
+                                                Студии
+                                            </li>
+                                        </ul>
+                                        <input type="text" name="select-category" value=""
+                                            class="dropdown__input-hidden">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel__item filter-item">
+                            <div class="buyer-filter__inputs">
+                                <label class="buyer-filter__label-body">
+                                    <span class="buyer-filter__text button-label ">Цена от</span>
+                                    <input type="number" min="1500000" max="5000000" placeholder="1000"
+                                        class="buyer-filter__input" value="" id="input-0">
+                                    <span class="buyer-filter__text"></span>
+                                </label>
+                                <label class="buyer-filter__label-body">
+                                    <span class="buyer-filter__text button-label ">Цена до</span>
+                                    <input type="number" min="1500000" max="5000000" placeholder="1500000"
+                                        class="buyer-filter__input" id="input-1">
+                                    <span class="buyer-filter__text"></span>
+                                </label>
+                            </div>
+                            <div class="buyer-filter__slider" id="range-slider"></div>
+                        </div>
+                        <div class="panel__item">
+                            <a href="" class="panel__map-button map-button _tr">
+                                На карте
+                            </a>
+                        </div>
+                        <div class="panel__item">
+                            <a href="#video-feedback" class="panel__button button popup-link _tr">
+                                Поиск недвижимости
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

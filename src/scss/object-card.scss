@@ -1,0 +1,720 @@
+.object-card {
+    @include adaptiv-value("padding-top", 30, 40, 1);
+    @include adaptiv-value("padding-bottom", 30, 40, 1);
+
+    @media(max-width:600px) {
+        background-color: #EBF1FB;
+    }
+
+    &__container {
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        background: #EBF1FB;
+        border-radius: 23px;
+        padding: 80px 40px;
+
+        @media(max-width:1100px) {
+            padding: 60px 20px;
+        }
+
+        @media(max-width:600px) {
+            padding: 0px;
+        }
+    }
+
+    &__info {}
+}
+
+.object-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media(max-width:1100px) {
+        gap: 15px;
+    }
+
+    @media(max-width:992px) {
+        display: block;
+    }
+
+    &__item {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 30px 25px;
+        flex: 0 1 calc(60% - 20px);
+
+        @media(max-width:992px) {
+            margin-bottom: 30px;
+            padding: 25px 15px;
+        }
+
+        @media(max-width:492px) {
+            padding: 25px 12px;
+        }
+    }
+
+    &__card {
+        flex: 0 1 calc(40% - 20px);
+    }
+
+    &__card-body {
+        flex: 0 1 calc(40% - 20px);
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 30px 25px;
+        position: sticky;
+        top: 50px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__title {}
+
+    &__icon {}
+
+    &__location {
+        display: inline-flex;
+        align-items: center;
+        color: $violet;
+        margin-bottom: 30px;
+
+        &:before {
+            background-image: url(../img/icons/location.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 15px;
+            height: 15px;
+            display: block;
+            content: "";
+            margin-right: 10px;
+        }
+    }
+
+    &__images {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    &__slider-button {
+        position: absolute;
+        top: calc(50% - 15px)
+    }
+
+    &__slider-button-prev {
+        left: 20px;
+    }
+
+    &__slider {
+        @include adaptiv-value("max-width", 580, 300, 1);
+
+        @media(max-width:992px) {
+            max-width: inherit;
+        }
+    }
+
+    &__wrapper {}
+
+    &__slide {}
+
+    &__image {
+        position: relative;
+        padding-bottom: 70%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__slider-button-next {
+        right: 20px;
+        transform: rotate(180deg);
+    }
+
+    &__fraction {
+        position: absolute;
+        z-index: 5;
+        bottom: 20px;
+        width: 50px;
+        white-space: nowrap;
+        color: #fff;
+        background: #454545;
+        border-radius: 11px;
+        padding: 5px 10px;
+        left: calc(50% - 30px);
+
+        span {
+            color: #fff;
+
+        }
+    }
+
+    &__thumbs {
+        margin-bottom: 35px;
+    }
+
+    &__description {}
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        p {
+            line-height: 160%;
+        }
+    }
+
+    &__feature {}
+
+    &__location-map {
+        position: relative;
+        padding-bottom: 70%;
+        overflow: hidden;
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__map {}
+
+    &__price {}
+
+    &__calculator {}
+}
+
+.thumbs {
+
+
+    &__slider {
+        @include adaptiv-value("max-width", 580, 300, 1);
+
+        @media(max-width:992px) {
+            max-width: inherit;
+        }
+    }
+
+    &__wrapper {}
+
+    &__slide {
+        width: auto;
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 6px;
+        cursor: pointer;
+        padding-bottom: 50%;
+
+        img {
+            border-radius: 6px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+}
+
+.object-feature {
+    padding-bottom: 40px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__item {}
+
+    &__lists {
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        top: 103%;
+        background: transparent;
+        color: $blue;
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+
+        &:before {
+            content: "Посмотреть";
+            display: block;
+        }
+
+        &:after {
+            display: block;
+            width: 15px;
+            height: 10px;
+            background-image: url(../img/icons/arrow.svg);
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.4s ease 0s;
+        }
+
+        &._active {
+            &:after {
+                transform: rotate(180deg);
+            }
+
+            &:before {
+                content: "Свернуть";
+            }
+        }
+    }
+
+    &__body {}
+
+    &__content {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin: 0px;
+        }
+    }
+
+    &__label {
+        color: $blue;
+        margin-bottom: 15px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__list {
+        flex: 0 1 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__point {}
+}
+
+.history-price {
+
+    &__rows {}
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(152, 155, 182, 0.2);
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item {
+
+        &_price {
+            background: #EBF1FB;
+            border-radius: 7px;
+            padding: 5px 10px;
+        }
+
+        &_red {
+            color: #FF4848;
+        }
+
+        &_green {
+            color: $green;
+        }
+
+        &_date {
+            color: $violet;
+        }
+    }
+
+    &__link {
+        color: $blue;
+        border-bottom: 1px dashed $blue;
+    }
+}
+
+.calculator {
+
+    &__top {}
+
+    &__title {}
+
+    &__content {}
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 20px;
+
+        @media(max-width:520px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        flex: 0 1 calc(50% - 20px);
+    }
+
+    &__label {
+        font-size: 11px;
+        color: $violet;
+        margin-bottom: 10px;
+    }
+
+    &__body {
+        height: 60px;
+        background: #EBF1FB;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    &__input {
+
+        input {
+            height: 40px;
+            font-size: 15px;
+            padding: 15px 0px;
+            background-color: #EBF1FB;
+        }
+
+        &_opacity {
+            input {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__button {
+        height: 60px;
+    }
+
+    &__main-button {
+        height: 60px;
+    }
+}
+
+
+.info-card {
+
+    &__top {
+        border-bottom: 1px solid rgba(152, 155, 182, 0.2);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__main-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__price-button {
+        background: #EBF1FB;
+        border-radius: 21px;
+        height: 50px;
+        padding: 5px;
+        display: flex;
+        align-items: end;
+        width: 30px;
+        justify-content: center;
+    }
+
+    &__prices {}
+
+    &__main-price {
+        margin-bottom: 6px;
+    }
+
+    &__sub-price {
+        color: $violet;
+    }
+
+    &__right {}
+
+    &__start-price {
+        position: relative;
+        top: 5px;
+        color: $violet;
+    }
+
+    &__feature {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(152, 155, 182, 0.2);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__column {
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label {
+        color: $violet;
+        margin-bottom: 20px;
+    }
+
+    &__point {
+        color: $blue;
+        background: #EBF1FB;
+        border-radius: 7px;
+        padding: 7.5px 7.5px;
+    }
+
+    &__agent {}
+
+    &__agent-top {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+
+    &__avatar {
+        img {
+            width: 85px;
+            height: 85px;
+        }
+    }
+
+    &__names {}
+
+    &__specialization {
+        color: $violet;
+        margin-bottom: 5px;
+    }
+
+    &__name {
+        font-size: 18px;
+    }
+
+    &__button {
+        padding: 16px;
+    }
+}
+
+
+.info-panel {
+    height: 100%;
+    position: sticky;
+    top: 50px;
+    &__body {}
+
+    &__top {}
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    &__item {
+        flex: 0 0 29px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    &__main {
+        font-size: 18px;
+    }
+
+    &__sub {
+        color: $violet;
+
+    }
+
+    &__row {
+        display: flex;
+        border-bottom: 1px solid rgba(152, 155, 182, 0.2);
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        color: $violet;
+        flex: 0 0 29px;
+    }
+
+    &__point {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #EBF1FB;
+        border-radius: 7px;
+        color: $blue;
+        padding: 7.5px;
+        flex: 0 0 29px;
+    }
+
+    &__bottom {}
+
+    &__sublabel {
+        color: $violet;
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        color: $blue;
+        margin-bottom: 25px;
+    }
+
+    &__button {
+        padding: 20px;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.object-rating {
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px 20px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(152, 155, 182, 0.2);
+    }
+
+    &__avatar {
+        border-radius: 50%;
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+    }
+
+    &__names {}
+
+    &__specialisation {
+        margin-bottom: 15px;
+        color: $violet;
+        font-size: 15px;
+    }
+
+    &__name {
+        font-size: 18px;
+    }
+
+    &__label {
+        font-size: 18px;
+        line-height: 140%;
+        margin-bottom: 30px;
+    }
+
+    &__grade {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__like {
+        color: $violet;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 17px;
+    }
+
+    &__dislike {
+        color: $violet;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        gap: 10px;
+        flex-direction: row-reverse;
+    }
+
+    &__send-message {
+        width: 20px;
+        top: 15px;
+        right: 20px;
+        height: 25px;
+        position: absolute;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../img/icons/send-message.svg);
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__field {
+        font-size: 16px;
+        resize: none;
+        background: #EBF1FB;
+        border-radius: 12px;
+        width: 100%;
+        max-height: 55px;
+        display: block;
+        padding: 15px 20px;
+        transition: all 0.4s ease 0s;
+
+        &:focus {
+            max-height: 250px;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.auction {
+
+    &__body {
+        @include adaptiv-value("padding", 50, 15, 1);
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__content {
+        width: auto;
+        overflow: inherit;
+        max-width: 1080px;
+        background-color: #EBF1FB;
+        border-radius: 23px;
+        padding: 40px 15px;
+    }
+
+    &__close {}
+
+    &__content-body {}
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__row {
+        display: flex;
+        gap: 15px;
+        @include adaptiv-value("margin-bottom", 50, 25, 1);
+
+        @media(max-width:992px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        @include adaptiv-value("padding", 30, 20, 1);
+        flex: 0 1 25%;
+        background: #FFFFFF;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        @media(max-width:992px) {
+            flex: 0 1 calc(50% - 7.5px);
+        }
+        @media(max-width:620px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__text {
+        flex: 1 1 100%;
+        margin-bottom: 40px;
+
+        p {
+            color: #000;
+            font-size: 15px;
+            line-height: 140%;
+        }
+    }
+
+    &__button {
+        padding: 12px;
+        width: 100%;
+        height: 55px;
+    }
+
+    &__point {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: $blue;
+        background-color: #F4F8FF;
+        width: 30px;
+        flex: 0 0 30px;
+        height: 30px;
+    }
+
+    &__fields {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 35px 30px;
+    }
+
+    &__form {}
+
+    &__label {
+        margin-bottom: 30px;
+        line-height: 140%;
+        font-size: 16px;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__field {
+        flex: 0 1 calc(33% - 20px);
+        position: relative;
+        @media(max-width:767px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__sublabel {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-size: 10px;
+        color: $violet;
+    }
+
+    &__input {
+        background: #FFFFFF;
+        border: 1px solid #D5D5D5;
+        border-radius: 12px;
+        padding: 10px 20px;
+        width: 100%;
+        height: 55px;
+    }
+}

@@ -1,0 +1,76 @@
+.map-catalog {
+
+    &__filters {
+    }
+
+    &__container {
+    }
+
+    &__body {
+        
+    }
+
+    &__content {
+       position: relative;
+       padding: 15px 0px 0px 15px;
+       overflow-y: hidden;
+       
+    }
+
+    &__content-body {
+        overflow-y: auto;
+        height: 600px;
+        margin: 0;
+        width: 360px;
+        @media(max-width:767px) {
+            width: 100%;
+            overflow: auto;
+            height: 100%;
+        }
+    }
+
+    &__map {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        @media(max-width:767px) {
+            position: static;
+            height: 500px;
+        }
+    }
+
+    &__products {
+       
+
+    }
+
+    &__slide {
+        max-width: 360px;
+        background-color: #F4F8FF;
+        padding: 30px 15px;
+        overflow-y: auto;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media(max-width:767px) {
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        @media(max-width:767px) {
+            width: 100%;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,244 @@
+<div class="edit-request">
+    <div class="edit-request__container container">
+        <div class="edit-request__body">
+            <div class="edit-request__item">
+                <h1 class="edit-request__title subtitle">
+                    Параметры
+                </h1>
+                <div class="edit-request__content">
+                    <div class="buyer-catalog__filter buyer-filter">
+                        <div class="buyer-filter__content">
+                            <div class="buyer-filter__row">
+                                <div class="buyer-filter__top">
+                                    <div class="buyer-filter__item">
+                                        <div class="buyer-filter__dropdown dropdown">
+                                            <div class="dropdown__body">
+                                                <div class="dropdown__content">
+                                                    <div class="dropdown__button-body ">
+                                                        <span class="dropdown__label">Тип объекта</span>
+                                                        <button type="submit"
+                                                            class="dropdown__button droplist__button _tr filter-item">
+                                                            Квартиры
+                                                        </button>
+                                                    </div>
+
+                                                    <ul class="dropdown__list _tr droplist__list">
+                                                        <li class="dropdown__list-item _tr" data-value="one">
+                                                            Студии
+                                                        </li>
+                                                        <li class="dropdown__list-item _tr" data-value="two">
+                                                            Квартиры
+                                                        </li>
+                                                        <li class="dropdown__list-item _tr" data-value="three">
+                                                            Студии
+                                                        </li>
+                                                    </ul>
+                                                    <input type="text" name="select-category" value=""
+                                                        class="dropdown__input-hidden">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buyer-filter__item">
+                                        <div class="buyer-filter__checkboxes checkboxes filter-item">
+                                            <div class="checkboxes__label">
+                                                Укажите количество комнат
+                                            </div>
+                                            <div class="checkboxes__content">
+                                                <div class="checkboxes__item">
+                                                    <input type="checkbox" id="number-1"
+                                                        class="checkboxes__input-hidden">
+                                                    <label for="number-1" class="checkboxes__checkbox">
+                                                        <span>1</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkboxes__item">
+                                                    <input type="checkbox" id="number-2"
+                                                        class="checkboxes__input-hidden">
+                                                    <label for="number-2" class="checkboxes__checkbox">
+                                                        <span>2</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkboxes__item">
+                                                    <input type="checkbox" id="number-3"
+                                                        class="checkboxes__input-hidden">
+                                                    <label for="number-3" class="checkboxes__checkbox">
+                                                        <span>3</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkboxes__item">
+                                                    <input type="checkbox" id="number-4"
+                                                        class="checkboxes__input-hidden">
+                                                    <label for="number-4" class="checkboxes__checkbox">
+                                                        <span>4</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkboxes__item">
+                                                    <input type="checkbox" id="studio" class="checkboxes__input-hidden">
+                                                    <label for="studio" class="checkboxes__checkbox">
+                                                        <span>Студия</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buyer-filter__item buyer-filter__item_small">
+                                        <div class="buyer-filter__dropdown dropdown">
+                                            <div class="dropdown__body">
+                                                <div class="dropdown__content">
+                                                    <div class="dropdown__button-body">
+                                                        <span class="dropdown__label">Выбор ЖК</span>
+                                                        <button type="submit"
+                                                            class="dropdown__button droplist__button _tr filter-item">
+                                                            Европейский
+                                                        </button>
+                                                    </div>
+                                                    <ul class="dropdown__list _tr droplist__list">
+                                                        <li class="dropdown__list-item _tr" data-value="one">
+                                                            Американский
+                                                        </li>
+                                                        <li class="dropdown__list-item _tr" data-value="two">
+                                                            Русский
+                                                        </li>
+                                                        <li class="dropdown__list-item _tr" data-value="three">
+                                                            Белорусский
+                                                        </li>
+                                                    </ul>
+                                                    <input type="text" name="select-category" value=""
+                                                        class="dropdown__input-hidden">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buyer-filter__item buyer-filter__item_small filter-item">
+                                        <div class="buyer-filter__inputs">
+                                            <label class="buyer-filter__label">
+                                                <span class="buyer-filter__text button-label">Площадь от</span>
+                                                <input type="number" min="1500000" max="5000000" placeholder="1000"
+                                                    class="buyer-filter__input" value="" id="input-0-square">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                            <label class="buyer-filter__label">
+                                                <span class="buyer-filter__text button-label">Площадь до</span>
+                                                <input type="number" min="1500000" max="300000" placeholder="20000"
+                                                    class="buyer-filter__input" id="input-1-square">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                        </div>
+                                        <div class="buyer-filter__slider" id="range-slider-square-value"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="edit-request__item">
+                <h2 class="edit-request__title subtitle">
+                    Адрес
+                </h2>
+                <div class="edit-request__label">
+                    Укажите желаемый район поиска на карте
+                </div>
+                <div class="edit-request__content">
+                    <div id="map" class="edit-request__map">
+
+                    </div>
+                </div>
+            </div>
+            <div class="edit-request__item">
+                <h2 class="edit-request__title subtitle">
+                    Мой комментарий
+                </h2>
+                <div class="edit-request__content">
+                    <div class="edit-request__text">
+                        Семья из 3 человек ищет квартиру до 3,5 млн рублей, в ипотеку. Первоначальный взнос 1,5 млн
+                    </div>
+                    <div class="edit-request__text">
+                        Семья из 3 человек ищет квартиру до 3,5 млн рублей, в ипотеку. Первоначальный взнос 1,5 млн
+                    </div>
+                </div>
+            </div>
+            <div class="edit-request__item">
+                <h2 class="edit-request__title subtitle">
+                    Аудио
+                </h2>
+                <div class="edit-request__content">
+                    <div class="edit-request__text">
+                        Добавте аудио к вашему запросу.
+                    </div>
+                    <div class="edit-request__text">
+                        Запросы с аудио привлекают больше внимания,получают больше предложений.
+                    </div>
+                    <div class="edit-request__point">
+                        <div class="edit-request__rectangle">
+
+                        </div>
+                        <button class="edit-request__button">
+                            Добавить
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-request__item">
+                <h2 class="edit-request__title subtitle">
+                    Аудио
+                </h2>
+                <div class="edit-request__content">
+                    <div class="buyer-catalog__filter buyer-filter">
+                        <div class="buyer-filter__content">
+                            <div class="buyer-filter__row" data-spollers>
+                                <div class="buyer-filter__top">
+                                    <div class="buyer-filter__item">
+                                        <div class="buyer-filter__dropdown dropdown">
+                                            <div class="dropdown__body">
+                                                <div class="dropdown__content">
+                                                    <div class="dropdown__button-body ">
+                                                        <span class="dropdown__label">Вид расчета</span>
+                                                        <button type="submit"
+                                                            class="dropdown__button droplist__button _tr filter-item">
+                                                            Наличные
+                                                        </button>
+                                                    </div>
+
+                                                    <ul class="dropdown__list _tr droplist__list">
+                                                        <li class="dropdown__list-item _tr" data-value="one">
+                                                            Электронные платежи
+                                                        </li>
+                                                        <li class="dropdown__list-item _tr" data-value="two">
+                                                            Наличные
+                                                        </li>
+                                                    </ul>
+                                                    <input type="text" name="select-category" value=""
+                                                        class="dropdown__input-hidden">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buyer-filter__item filter-item">
+                                        <div class="buyer-filter__inputs">
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label ">Бюджет от</span>
+                                                <input type="number" min="1500000" max="5000000" placeholder="1000"
+                                                    class="buyer-filter__input" value="" id="input-0">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                            <label class="buyer-filter__label-body">
+                                                <span class="buyer-filter__text button-label ">Бюджет до</span>
+                                                <input type="number" min="1500000" max="5000000"
+                                                    placeholder="1500000" class="buyer-filter__input" id="input-1">
+                                                <span class="buyer-filter__text"></span>
+                                            </label>
+                                        </div>
+                                        <div class="buyer-filter__slider" id="range-slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>    

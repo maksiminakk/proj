@@ -1,0 +1,212 @@
+.suggested-agent {
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 23px;
+    border: 1px solid #fff;
+    transition: all 0.4s ease 0s;
+    color: $black;
+
+    &:not(:first-child) {
+        .suggested-agent__item {
+            &:before {
+                @media(min-width:767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover {
+        border: 1px solid $blue;
+    }
+
+    @media(max-width:492px) {
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media(max-width:767px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        @media(max-width:492px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        
+        @media(min-width:767px) {
+            height: 60px;
+            align-items: center;
+        }
+        @media(max-width:767px) {
+            flex-direction: column;
+        }
+
+        &:before {
+            display: block;
+            position: absolute;
+            color: $violet;
+            top: -60px;
+            white-space: nowrap;
+
+            @media(max-width:767px) {
+                position: static;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__button {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        background-image: url(../img/icons/blocked-blue.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        background-color: #EBF1FB;
+        transition: all 0.4s ease 0s;
+
+        &:hover+.suggested-agent__blocked {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        &:hover {
+            background-color: $blue;
+            background-image: url(../img/icons/blocked.svg);
+        }
+    }
+
+    &__left {
+        &:before {
+            content: "ФИО";
+            left: 20px;
+            
+        }
+        @media(max-width:767px) {
+            flex: 1 1 100%;
+            &:before {
+                display: none;
+                
+            }
+            
+        }
+
+    }
+
+    &__right {
+        @media(max-width:767px) {
+            display: none;
+        }
+    }
+
+    &__amount {
+        &:before {
+            content: "Предложено";
+            left: 15px;
+        }
+    }
+
+    &__icons {
+        &:before {
+            content: "Новые предложения";
+            left: -35px;
+        }
+    }
+
+    &__point {
+        background: #EBF1FB;
+        border-radius: 7px;
+        padding: 5px 10px;
+    }
+
+    &__blocked {
+        opacity: 0;
+        position: absolute;
+        top: -10px;
+        color: #fff;
+        right: -150%;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 12px;
+        transition: all 0.4s ease 0s;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+
+        @media(max-width:767px) {
+            right: 0;
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+        background-color: $green;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &._no {
+            background-color: #989898;
+        }
+    }
+
+    &__icon-body {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        margin-right: 15px;
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+    }
+
+    &__names {}
+
+    &__specialization {
+        margin-bottom: 7px;
+        color: $violet;
+        line-height: 140%;
+    }
+
+    &__name {
+        font-size: 17px;
+    }
+
+    &__right {}
+
+    &__phone {
+        padding: 10px 25px;
+    }
+}

@@ -1,0 +1,148 @@
+.banner {
+
+    &__container {
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        background-image: url(../img/banner/main.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 0;
+        position: relative;
+        padding: 70px 50px 40px 50px;
+        border-radius: 15px;
+        @media(max-width:992px) {
+            padding: 70px 30px 40px 30px;
+        }
+        @media(max-width:492px) {
+            padding: 50px 15px 40px 15px;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__content {
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 103px;
+    }
+
+    &__panel {}
+}
+
+.panel {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0px 12px 12px 12px;
+    position: relative;
+
+    &__top {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-image: url(../img/banner/suppor-el.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        position: absolute;
+        top: -52px;
+        height: 53px;
+        width: 100%;
+        left: 0;
+        padding-left: 20px;
+    }
+
+    &__label {
+        a {
+            color: $blue;
+            border-bottom: 1px dashed $blue;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @media(max-width:992px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+
+        &:first-child {
+            flex: 1 1 185px;
+        }
+
+        &:nth-child(2) {
+            flex: 1 1 270px;
+        }
+
+        &:nth-child(3) {
+            flex: 1 1 170px;
+            @media(max-width:992px) {
+                flex: 0 1 calc(50% - 10px);
+            }
+            @media(max-width:900px) {
+                flex: 1 1 170px;
+            }
+        }
+
+        &:nth-child(4) {
+            flex: 1 1 240px;
+            @media(max-width:992px) {
+                flex: 0 1 calc(50% - 10px);
+            }
+            @media(max-width:900px) {
+                flex: 1 1 240px;
+            }
+        }
+        @media(max-width:992px) {
+            flex: 0 1 50%;
+        }
+    }
+
+    &__map-button {}
+
+    &__button {
+        height: 65px;
+    }
+}
+
+.map-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    border-radius: 25px;
+    height: 65px;
+    color: #fff;
+    &:hover {
+        border-radius: 12px;
+        opacity: 0.9;
+    }
+
+    &:after {
+        content: "";
+        background-image: url(../img/icons/location-map-button.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(131, 243, 203, 0.5);
+        width: 34px;
+        height: 34px;
+        margin-left: 20px;
+        flex: 0 0 34px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html', {})
+        <main class="main">
+            @@include('html/buyer-catalog.html', {})
+        </main>
+        @@include('html/footer.html', {})
+    </div>
+    @@include('html/account-menu.html', {})
+    @@include('html/case-menu.html', {})
+    @@include('html/map.html', {})
+    <!-- <div id="map"></div> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<b231b81d-f535-4d7c-a0f6-75122791fd24>" type="text/javascript"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

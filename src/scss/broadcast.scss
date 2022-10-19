@@ -1,0 +1,389 @@
+.broadcast {
+    padding: 40px 0px;
+    &__container {
+        @media(max-width:600px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+    }
+
+    &__content {
+        background-color: #131A22;
+        background-image: url(../img/broadcast/bg.png);
+        background-position: 20% 100%;
+        background-repeat: no-repeat;
+        padding: 40px 90px;
+        border-radius: 25px;
+        @media(max-width:992px) {
+            padding: 40px 30px;
+        }
+        @media(max-width:600px) {
+            padding: 30px 15px;
+        }
+        @media(max-width:492px) {
+            border-radius: 0;
+            background-color: #fff;
+            padding: 0;
+            background: none;
+        }
+    }
+
+    &__top {
+        display: flex;
+        color: #fff;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+        @media(max-width:492px) {
+            justify-content: space-between;
+            padding: 0px 15px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        &:before {
+            content: "";
+            background-image: url(../img/icons/broadcast/live.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 15px;
+            width: 12px;
+            height: 12px;
+            flex: 0 0 12px;
+        }
+        @media(max-width:492px) {
+            color: $black;
+        }
+    }
+
+    &__content-body {
+        position: relative;
+        @media(max-width:492px) {
+            padding: 50px 0px;
+            background-color: #131A22;
+        }
+    }
+
+    &__slider-button {
+        background-image: url(../img/icons/broadcast/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 5;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__slider-button-next {
+        top: calc(50% - 20px);
+        right: -30px;
+        @media(max-width:600px) {
+            right: 10px;
+        }
+       
+    }
+
+    &__slider-button-prev {
+        transform: rotate(180deg);
+        top: calc(50% - 20px);
+        left: -30px;
+        @media(max-width:600px) {
+            left: 10px;
+        }
+    }
+
+    &__button {
+        padding: 15px 20px;
+        @media(max-width:492px) {
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+        &:after {
+            content: "Смотреть все эфиры";
+            display: block;
+            color: #fff;
+
+            @media(max-width:492px) {
+                content: "Все эфиры";
+                white-space: nowrap;
+                color: $blue;
+            }
+        }
+    }
+
+    &__slider {
+    }
+
+    &__wrapper {
+        
+        height: 100%;
+    }
+
+    &__slide {
+        position: relative;
+        width: 100%;
+        
+    }
+
+    &__item {
+    }
+}
+
+.broadcast-item {
+    position: relative;
+    border-radius: 13px;
+    overflow: hidden;
+    &__row {
+        display: flex;
+        @media(max-width:492px) {
+            display: block;
+        }
+    }
+
+    &__column {
+        position: relative;
+        @media(max-width:492px) {
+            position: static;
+        }
+        &_small {
+            flex: 0 1 40%;
+        }
+        &_main{
+            flex: 0 1 60%;
+            padding: 70px 20px;
+            background-color: #fff;
+            @media(max-width:992px) {
+                padding: 60px 15px;
+            }
+            @media(max-width:492px) {
+                padding: 90px 15px 20px 15px;
+            }
+            
+        }
+        
+    }
+
+    &__image {
+        @media(max-width:492px) {
+            height: 100%;
+            width: 100%;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            @media(max-width:492px) {
+                right: 0;
+                left: 0;
+
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        line-height: 120%;
+        @media(max-width:492px) {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 150px;
+            color: #fff;
+        }
+    }
+
+    &__label {
+        color: #989BB6;
+        margin-bottom: 25px;
+        @media(max-width:492px) {
+            display: none;
+        }
+    }
+
+    &__thumbs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        img {
+            width: 34px;
+            height: 34px;
+            border-radius: 5px;
+        }
+        @media(max-width:492px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        background: #21223A;
+        padding: 15px;
+        border: none;
+        @media(max-width:492px) {
+            background-color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+        &:after {
+            content: "Буду смотреть";
+            display: block;
+            color: #fff;
+            font-size: 15px;
+            @media(max-width:492px) {
+                content: "Учавствую";
+                color: $blue;
+            }
+        }
+        &:before {
+            content: "";
+            background-image: url(../img/icons/broadcast/youtube.png);
+            width: 25px;
+            height: 18px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 15px;
+            @media(max-width:492px) {
+                display: none;
+            }
+        }
+        &:hover {
+            background: #21223A;
+            opacity: 0.85;
+        }
+    }
+
+    &__panel {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 15px;
+        left: 15px;
+    }
+
+    &__left {
+        background: #FF4848;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;  
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        &:before {
+            content: "";
+            display: block;
+            background-image: url(../img/icons/broadcast/live.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+        }
+        @media(max-width:492px) {
+            display: none;
+        }
+    }
+
+    &__right {
+        padding: 10px 10px 10px 30px;
+        border-radius: 12px;
+        background: #4E4E4E;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -25px;
+        color: #fff;
+        @media(max-width:492px) {
+            padding: 10px;
+            left: 0;
+
+        }
+    }
+
+    &__share {
+        position: absolute;
+        color: #989BB6;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media(max-width:492px) {
+
+            color: #fff;
+        }
+        &:after {
+            display: block;
+            content: "";
+            background-image: url(../img/icons/broadcast/share.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #989BB6;
+        }
+    }
+
+    
+}
+
+
+
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80%;
+    @media(max-width:900px) {
+        padding-bottom: 100%;
+    }
+    @media(max-width:767px) {
+        padding-bottom: 60%;
+    }
+    @media(max-width:700px) {
+        padding-bottom: 70%;
+    }
+    @media(max-width:600px) {
+        padding-bottom: 80%;
+    }
+    @media(max-width:492px) {
+        padding-bottom: 90%;
+    }
+    @media(max-width:430px) {
+        padding-bottom: 95%;
+    }
+    @media(max-width:380px) {
+        padding-bottom: 105%;
+    }
+    @media(max-width:350px) {
+        padding-bottom: 115%;
+    }
+    &__body {
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 13px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+

@@ -1,0 +1,146 @@
+.buyer-card {
+    padding: 20px 0px;
+    @media(max-width:492px) {
+        background: #EBF1FB;
+    }
+    &__container {
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        background: #EBF1FB;
+        border-radius: 23px;
+        padding: 40px 80px;
+        @include adaptiv-value("margin-bottom", 40, 30, 1);
+        @media(max-width:992px) {
+            padding: 30px 40px;
+        }
+        @media(max-width:850px) {
+            padding: 30px 20px;
+        }
+        @media(max-width:492px) {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 50px;
+        @media(max-width:992px) {
+            gap: 25px;
+        }
+        @media(max-width:767px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__column {
+        flex: 0 1 60%;
+
+        &:last-child {
+            flex: 0 1 40%;
+        }
+    }
+
+    &__item {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 40px;
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+        @media(max-width:992px) {
+            padding: 30px;
+        }
+        @media(max-width:767px) {
+            padding: 25px;
+        }
+        @media(max-width:492px) {
+            padding: 20px 15px;
+        }
+        &::last-child {
+            margin: 0;
+        }
+    }
+
+    &__title {
+
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+
+
+    }
+
+    &__columns {
+        display: flex;
+    }
+
+    &__list {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        @include adaptiv-value("gap", 20, 15, 1);
+
+    }
+
+    &__left {
+        color: $violet;
+    }
+
+    &__point {
+        
+
+    }
+
+    &__right {}
+
+    &__button-lock-on-map {
+        padding: 8px;
+        gap: 10px;
+        &:after {
+            content: "";
+            background-image: url(../img/icons/et_map.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 15px;
+            @media(max-width:360px) {
+                display: none;
+            }
+        }
+    }
+
+    &__sublist {
+        display: flex;
+        flex-direction: column;
+        @include adaptiv-value("gap", 20, 15, 1);
+    }
+
+    &__subpoint {}
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include adaptiv-value("margin-bottom", 30, 20, 1);
+    }
+
+    &__icon {}
+
+    &__agent-card {
+        margin-bottom: 30px;
+    }
+
+    &__products-body {
+        background: #EBF1FB;
+        border-radius: 23px;
+        padding: 30px 0px;
+    }
+
+    &__text {
+        color: $violet;
+        line-height: 150%;
+    }
+
+    &__audio-player {}
+}

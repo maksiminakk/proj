@@ -1,0 +1,68 @@
+.sign-in {
+
+    &__body {}
+
+    &__title {
+        font-size: 20px;
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__text {
+        color: $violet;
+        line-height: 135%;
+        @include adaptiv-value("margin-bottom", 40, 25, 1);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__item {
+        position: relative;
+        &:first-child {
+            &:before {
+                content: "Электоронная почта";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                content: "Пароль";
+                display: block;
+                position: absolute;
+                font-size: 10px;
+                color: $violet;
+                z-index: 2;
+                top: 5px;
+                left: 20px;
+            }
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #D5D5D5;
+        border-radius: 12px;
+        height: 55px;
+        font-size: 14px;
+        padding-left: 20px;
+        font-size: 16px;
+        position: relative;
+        
+    }
+
+    &__button {
+        height: 40px;
+        width: 100%;
+    }
+}

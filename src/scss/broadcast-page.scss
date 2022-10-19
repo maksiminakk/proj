@@ -1,0 +1,116 @@
+.broadcast-page {
+    padding: 30px 0px;
+    @media(max-width:492px) {
+        background-color: #EBF1FB;
+        .broadcast__content-body {
+            background-color: inherit;
+        }
+    }
+    &__container {}
+
+    &__body {}
+
+    &__top {}
+
+    &__title {
+        margin-bottom: 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        &:before {
+            content: "";
+            background-image: url(../img/icons/live.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 10px;
+            height: 10px;
+            flex: 0 0 10px;
+            display: block;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__tab-button {
+        background-color: #EBF1FB;
+        border-radius: 7px;
+        padding: 7.5px 10px;
+        color: $black;
+        &._active {
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+
+    &__content {
+        background: #32425F;
+        border-radius: 25px;
+        padding: 65px;
+        @media(max-width:992px) {
+            padding: 40px;
+        }
+        @media(max-width:767px) {
+            padding: 30px 25px;
+        }
+        @media(max-width:492px) {
+            padding: 25px 0px;
+        }
+    }
+}
+
+.broadcast {
+
+    &__content-body {}
+
+    &__slider-button {}
+
+    &__slider-button-prev {}
+
+    &__slider {}
+
+    &__wrapper {}
+
+    &__slide {}
+
+    &__image-item {}
+
+    &__item {}
+
+    &__slider-button-next {}
+}
+
+.broadcast-item {
+
+    &__row {}
+
+    &__column {
+
+        &_small {}
+
+        &_main {}
+    }
+
+    &__image {}
+
+    &__title {}
+
+    &__label {}
+
+    &__thumbs {}
+
+    &__button {}
+
+    &__panel {}
+
+    &__left {}
+
+    &__right {}
+
+    &__share {}
+}

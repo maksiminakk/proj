@@ -1,0 +1,147 @@
+.request-modal {
+    @include adaptiv-value("padding", 25, 5, 1);
+
+    &__body {}
+
+    &__title {
+        font-size: 20px;
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+        line-height: 130%;
+        max-width: calc(100% - 20px);
+    }
+
+    &__content {
+        span {
+            color: #FF4848;
+        }
+    }
+
+    &__sublabel {
+        font-size: 14px;
+        @include adaptiv-value("margin-bottom", 20, 15, 1);
+        margin-top: 10px;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        color: $violet;
+        font-size: 14px;
+    }
+
+    &__input {
+        background: #EBF1FB;
+        border-radius: 12px;
+        padding: 10px;
+        transition: all 0.4s ease 0s;
+        display: block;
+        width: 80%;
+        height: 60px;
+        @media(max-width:492px) {
+            width: 100%;
+        }
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 7.5px;
+    }
+
+    &__icon {}
+
+    &__hidden-input {
+        display: none;
+
+        &:checked + .request-modal__for-label {
+            color: $violet;
+            &:before {
+                transform: scale(1);
+            }
+
+            &:after {}
+        }
+    }
+
+    &__warning {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $violet;
+        @include adaptiv-value("margin-bottom", 40, 20, 1);    
+    }
+
+    &__warning {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__for-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        flex: 0 0 100px;
+        justify-content: space-between;
+        position: relative;
+        color: $violet;
+        cursor: pointer;
+        &:hover {
+            color: $violet;
+        }
+        &:before,
+        &:after {
+            transition: all 0.4s ease 0s;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+        }
+
+        &:before {
+            transform: scale(0);
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 5px;
+            background-color: $blue;
+            background-image: url(../img/icons/check-radius.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:after {
+            background: #EBF1FB;
+            border-radius: 5px;
+            
+        }
+    }
+
+    &__button {
+        height: 50px;
+        margin-bottom: 20px;
+        width: 80%;
+        @media(max-width:492px) {
+            width: 100%;
+        }
+    }
+
+    &__confirm {
+        line-height: 130%;
+        font-size: 14px;
+    }
+}

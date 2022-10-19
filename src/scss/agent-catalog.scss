@@ -1,0 +1,284 @@
+.agent-catalog {
+    @media(max-width:492px) {
+        background-color: #EBF1FB;
+    }
+    &__container {
+        @media(max-width:492px) {
+            padding: 0;
+        }
+    }
+
+    &__body {}
+
+    &__filter {}
+
+    &__content {
+        background: #EBF1FB;
+        border-radius: 23px;
+        padding: 80px;
+        @media(max-width:992px) {
+            padding: 80px 40px 40px 40px;
+        }
+        @media(max-width:560px) {
+            padding: 60px 25px 25px 25px;
+        }
+        @media(max-width:492px) {
+            padding: 40px 0px 30px 0px;
+            border-radius: 0px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include adaptiv-value("margin-bottom", 30, 25, 1);
+        @media(max-width:492px) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        &:first-child {
+            .agent-item__personal {
+                @media(max-width:560px) {
+                    flex: 1 1 100%;
+                }
+                &:before {
+                    content: "ФИО";
+                    display: block;
+                    position: absolute;
+                    top: -55px;
+                    color: $violet;
+                    left: 20px;
+                    @media(max-width:560px) {
+                        display: none;
+                    }
+                }
+            }
+            .agent-item__rating {
+                &:before {
+                    content: "Рейтинг";
+                    display: block;
+                    position: absolute;
+                    top: -60px;
+                    color: $violet;
+                    left: 20px;
+                    @media(max-width:560px) {
+                        display: none;
+                    }
+                }
+            }
+            .agent-item__reviews {
+                @media(max-width:560px) {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-direction: row-reverse;
+                }
+                &:before {
+                    content: "Отзывы";
+                    display: block;
+                    position: absolute;
+                    top: -70px;
+                    color: $violet;
+                    left: -15px;
+                    @media(max-width:560px) {
+                        position: static;
+                        content: "Отзывов";
+                        color: $black;
+                    }
+                }
+            }
+            .agent-item__specialization {
+                @media(max-width:700px) {
+                    display: inline-flex;
+                    gap: 10px;
+                    flex: 1 1 250px;
+                    align-items: center;
+                }
+                @media(max-width:560px) {
+                    flex: 1 1 100%;
+                    justify-content: space-between;
+                    span {
+                        display: none;
+                    }
+                }
+                &:before {
+                    content: "Специализация";
+                    display: block;
+                    position: absolute;
+                    top: -62px;
+                    color: $violet;
+                    left: 0;
+                    @media(max-width:700px) {
+                        position: static;
+                    }
+                }
+            }
+            .agent-item__experience {
+                @media(max-width:767px) {
+                    flex: 1 1 20%;
+                    display: inline-flex;
+                    gap: 10px;
+                }
+                @media(max-width:560px) {
+                    display: none;
+                }
+                &:before {
+                    content: "Стаж";
+                    display: block;
+                    position: absolute;
+                    top: -70px;
+                    color: $violet;
+                    left: 0;
+                    @media(max-width:767px) {
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding: 25px;
+        color: $black;
+        font-size: 15px;
+        margin-bottom: 20px;
+        @media(max-width:492px) {
+            
+            padding: 15px;
+        }
+    }
+
+    &__bottom {
+        @media(max-width:492px) {
+            padding: 0px 15px;
+        }
+    }
+}
+
+
+.agent-item {
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 17px 60px;
+    display: flex;
+    align-items: center;
+    color: $black;
+    border: 1px solid #fff;
+    transition: all 0.4s ease 0s;
+    gap: 35px;
+    &:hover {
+        border: 1px solid $blue;
+        .agent-item__personal {
+            color: $blue;
+        }
+        .agent-item__rating {
+            color: $blue;
+            
+        }
+        .agent-item__reviews {
+            color: $blue;
+            
+        }
+        .agent-item__specialization {
+            color: $blue;
+            
+        }
+        .agent-item__experience {
+            color: $blue;
+            
+        }
+    }
+    justify-content: space-between;
+    @media(max-width:992px) {
+        padding: 17px 35px; 
+    }
+    @media(max-width:767px) {
+        flex-wrap: wrap;
+    }
+    @media(max-width:492px) {
+        padding: 15px 25px;
+    }
+    &__personal {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+    }
+
+    &__avatar {
+        position: relative;
+        height: 100%;
+        img {
+            width: 45px;
+            height: 45px;
+            @media(max-width:492px) {
+                width: 63px;    
+                height: 63px;
+            }
+        }
+        
+    }
+
+    &__name {
+        p {
+            @media(max-width:560px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__rating {
+        height: 100%;
+        position: relative;
+        background: #EBF1FB;
+        border-radius: 9px;
+        padding: 8px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__mobile {
+        display: none;
+        color: $violet;
+        
+        @media(max-width:560px) {
+            display: block;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        span {
+            color: $black;
+            font-size: 15px;
+        }
+    }
+
+    &__number {}
+
+    &__stars {}
+
+    &__reviews {
+        position: relative;
+        height: 100%;
+    }
+
+    &__specialization {
+        position: relative;
+        line-height: 120%;
+        height: 100%;
+        span {
+            color: $blue;
+        }
+    }
+
+    &__experience {
+        position: relative;
+    }
+}
+
