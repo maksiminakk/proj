@@ -16,6 +16,7 @@
         background: #EBF1FB;
         border-radius: 23px;
         padding: 80px 40px;
+        margin-bottom: 20px;
 
         @media(max-width:1100px) {
             padding: 60px 20px;
@@ -30,16 +31,25 @@
 }
 
 .object-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
 
-    @media(max-width:1100px) {
-        gap: 15px;
+    &__main {
+        display: flex;
+        gap: 20px;
+
+        @media(max-width:767px) {
+            flex-direction: column-reverse;
+        }
     }
 
-    @media(max-width:992px) {
-        display: block;
+    &__main-row {
+        flex: 0 1 calc(70% - 10px);
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+
+        @media(max-width:992px) {
+            flex: 0 1 calc(60% - 10px);
+        }
     }
 
     &__item {
@@ -59,7 +69,11 @@
     }
 
     &__card {
-        flex: 0 1 calc(40% - 20px);
+        flex: 0 1 calc(30% - 10px);
+
+        @media(max-width:992px) {
+            flex: 0 1 calc(40% - 10px);
+        }
     }
 
     &__card-body {
@@ -75,10 +89,75 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        @media(max-width:600px) {
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
     }
 
-    &__title {}
+    &__prices {
+        .product-price {
+            align-items: start;
+        }
+    }
+
+    &__price {
+        .product-price__main {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .product-price__all-price {
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        .product-price__rounding {
+            display: inline;
+            margin: 0;
+            align-self: start;
+        }
+
+        .product-price__sub-price {
+            font-weight: 500;
+
+        }
+    }
+
+
+    &__benefits {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    &__benefit {
+        padding: 0px 10px;
+        height: 34px;
+        background: #EBF1FB;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        color: $blue;
+    }
+
+    &__benefit-icon {}
+
+
+
+    &__title {
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
 
     &__icon {}
 
@@ -103,6 +182,7 @@
     &__images {
         margin-bottom: 10px;
         position: relative;
+        flex: 0 0 660px;
     }
 
     &__slider-button {
@@ -115,11 +195,16 @@
     }
 
     &__slider {
-        @include adaptiv-value("max-width", 580, 300, 1);
+        max-width: 754px;
 
-        @media(max-width:992px) {
+        @media(max-width:1200px) {
             max-width: inherit;
         }
+    }
+
+    &__sliders {
+        display: flex;
+        gap: 20px;
     }
 
     &__wrapper {}
@@ -128,9 +213,19 @@
 
     &__image {
         position: relative;
-        padding-bottom: 70%;
+        padding-bottom: 62%;
+        border-radius: 12px;
+
+        @media(max-width:1200px) {
+            padding-bottom: 40%;
+        }
+
+        @media(max-width:492px) {
+            padding-bottom: 50%;
+        }
 
         img {
+            border-radius: 12px;
             position: absolute;
             top: 0;
             left: 0;
@@ -165,6 +260,7 @@
 
     &__thumbs {
         margin-bottom: 35px;
+        flex: 0 0 320px;
     }
 
     &__description {}
@@ -174,9 +270,9 @@
     }
 
     &__text {
-        p {
-            line-height: 160%;
-        }
+        position: relative;
+        line-height: 160%;
+        padding-bottom: 15px;
     }
 
     &__feature {}
@@ -208,10 +304,12 @@
 
     &__slider {
         @include adaptiv-value("max-width", 580, 300, 1);
+        max-height: 465px;
 
-        @media(max-width:992px) {
+        @media(max-width:1200px) {
             max-width: inherit;
         }
+
     }
 
     &__wrapper {}
@@ -224,7 +322,15 @@
         position: relative;
         border-radius: 6px;
         cursor: pointer;
-        padding-bottom: 50%;
+        padding-bottom: 70%;
+
+        @media(max-width:1200px) {
+            padding-bottom: 40%;
+        }
+
+        @media(max-width:492px) {
+            padding-bottom: 50%;
+        }
 
         img {
             border-radius: 6px;
@@ -251,9 +357,56 @@
         position: relative;
     }
 
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media(max-width:992px) {
+            gap: 10%;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__position {
+
+        flex: 0 1 50%;
+        font-size: 15px;
+        color: $violet;
+        &._main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EBF1FB;
+            border-radius: 7px;
+            height: 30px;
+            font-size: 12px;
+            color: $blue;
+            font-weight: 500;
+            padding: 10px;
+        }
+    }
+
+    &__more-content {
+        padding: 15px 0px 0px 0px;
+    }
+
     &__button {
         position: absolute;
-        top: 103%;
+        top: 115%;
         background: transparent;
         color: $blue;
         display: inline-flex;
@@ -261,7 +414,7 @@
         align-items: center;
 
         &:before {
-            content: "Посмотреть";
+            content: "Подробнее";
             display: block;
         }
 
@@ -301,21 +454,13 @@
         color: $blue;
         margin-bottom: 15px;
     }
+}
 
-    &__row {
-        display: flex;
-        align-items: center;
-        gap: 50px;
+.object-info {
+    &__spollers-button {
+        left: 0;
+        top: 100%;
     }
-
-    &__list {
-        flex: 0 1 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    &__point {}
 }
 
 .history-price {
@@ -428,7 +573,10 @@
 
 
 .info-card {
-
+    text-align: center;
+    @media(max-width:767px) {
+        max-width: 320px;
+    }
     &__top {
         border-bottom: 1px solid rgba(152, 155, 182, 0.2);
         padding-bottom: 20px;
@@ -512,12 +660,17 @@
 
     &__avatar {
         img {
-            width: 85px;
-            height: 85px;
+            width: 75px;
+            height: 75px;
         }
     }
 
-    &__names {}
+    &__names {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     &__specialization {
         color: $violet;
@@ -526,6 +679,11 @@
 
     &__name {
         font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    &__visit {
+        font-size: 12px;
     }
 
     &__button {
@@ -538,6 +696,7 @@
     height: 100%;
     position: sticky;
     top: 50px;
+
     &__body {}
 
     &__top {}
@@ -717,4 +876,46 @@
             max-height: 250px;
         }
     }
+}
+
+.sliders {
+    display: block;
+    position: relative;
+
+    &__content {
+        display: flex;
+        gap: 20px;
+
+        @media(max-width:1210px) {
+            display: block;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        gap: 10px;
+        z-index: 6;
+        top: 10px;
+        right: 25px;
+    }
+
+    &__point {
+        background: #FFFFFF;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0px 13px;
+        height: 39px;
+        color: $black;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+
 }

@@ -1,14 +1,20 @@
 .realtor-info {
     padding: 30px 0px 80px 0px;
+    .products {
+        @media(max-width:492px) {
+            padding: 0px 15px;
+        }
+    }
     @media(max-width:492px) {
         background-color: #EBF1FB;
     }
 
     &__container {
-        @media(max-width:392px) {
+        @media(max-width:992px) {
             padding: 0px;
         }
     }
+
     &__body {
         background-color: #EBF1FB;
         border-radius: 23px;
@@ -16,32 +22,53 @@
 
     &__row {
         display: flex;
-        gap: 50px;
+        gap: 40px;
         @include adaptiv-value("margin-bottom", 60, 20, 1);
         padding: 40px 90px;
+
         @media(max-width:1100px) {
             padding: 35px 50px;
         }
+
         @media(max-width:992px) {
             gap: 30px;
-            padding: 30px;
+            padding: 30px 20px;
         }
+
         @media(max-width:767px) {
             flex-direction: column-reverse;
         }
+
         @media(max-width:492px) {
-            padding: 0;
+            padding: 0px 15px;
         }
+
+        
+    }
+
+    &__sticky {
+        width: 100%;
+        top: 60px;
+        position: sticky;
     }
 
 
     &__column {
         &_main {
-            flex: 0 1 calc(55% - 25px);
+            flex: 0 1 calc(65% - 20px);
         }
 
         &_small {
-            flex: 0 1 calc(45% - 25px);
+            flex: 0 1 calc(35% - 20px);
+        }
+        @media(max-width:992px) {
+            &_main {
+                flex: 0 1 calc(60% - 15px);
+            }
+    
+            &_small {
+                flex: 0 1 calc(40% - 15px);
+            }
         }
     }
 
@@ -51,11 +78,9 @@
         }
     }
 
-    &__feature {
-    }
+    &__feature {}
 
-    &__about {
-    }
+    &__about {}
 
     &__video {
         img {
@@ -65,24 +90,27 @@
         }
     }
 
-    &__reviews {
-    }
+    &__reviews {}
 
     &__agent-card {
         @include adaptiv-value("margin-bottom", 60, 20, 1);
     }
 }
+
 .agent-feature {
     background-color: #fff;
     padding: 30px 50px 50px 30px;
     border-radius: 12px;
     @include adaptiv-value("margin-bottom", 40, 20, 1);
+
     @media(max-width:767px) {
         padding: 20px 15px;
     }
+
     @media(max-width:392px) {
         border-radius: 0px;
     }
+
     &__title {
         @include adaptiv-value("margin-bottom", 30, 20, 1);
     }
@@ -96,6 +124,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
         &:first-child {
             div {
                 color: $violet;
@@ -104,16 +133,13 @@
     }
 
 
-    &__item {
-        
-    }
+    &__item {}
 
     &__left {
         color: $violet;
     }
 
-    &__right {
-    }
+    &__right {}
 }
 
 .agent-about {
@@ -121,12 +147,15 @@
     border-radius: 12px;
     padding: 30px 30px 45px 30px;
     @include adaptiv-value("margin-bottom", 40, 20, 1);
+
     @media(max-width:767px) {
         padding: 20px 15px;
     }
+
     @media(max-width:392px) {
         border-radius: 0px;
     }
+
     &__title {
         @include adaptiv-value("margin-bottom", 30, 20, 1);
     }
@@ -135,7 +164,7 @@
         p {
             line-height: 140%;
         }
-        
+
     }
 }
 
@@ -144,18 +173,20 @@
     border-radius: 12px;
     padding: 30px;
     @include adaptiv-value("margin-bottom", 40, 20, 1);
+
     @media(max-width:767px) {
         padding: 20px 15px;
     }
+
     @media(max-width:392px) {
         border-radius: 0px;
     }
+
     &__title {
         @include adaptiv-value("margin-bottom", 30, 20, 1);
     }
 
-    &__video {
-    }
+    &__video {}
 }
 
 .agent-reviews {
@@ -163,20 +194,30 @@
     border-radius: 12px;
     padding: 30px;
     @include adaptiv-value("margin-bottom", 40, 20, 1);
+
     @media(max-width:767px) {
         padding: 20px 15px;
     }
+
     @media(max-width:392px) {
         border-radius: 0px;
     }
+
     &__title {
         @include adaptiv-value("margin-bottom", 30, 20, 1);
+        @include adaptiv-value("padding-bottom", 30, 20, 1);
+        border-bottom: 1px solid rgba(122, 127, 170, 0.2);
+
+        span {
+            color: $violet;
+        }
     }
 
     &__item {
         border-bottom: 1px solid #EEEEEE;
         padding-bottom: 20px;
         margin-bottom: 20px;
+
         &:last-child {
             border: none;
             margin: 0;
@@ -188,7 +229,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include adaptiv-value("margin-bottom", 25, 20, 1);
+        @include adaptiv-value("margin-bottom", 30, 20, 1);
+
         @media(max-width:900px) {
             flex-direction: column;
             gap: 12px;
@@ -198,12 +240,20 @@
 
     &__name {
         margin-right: 15px;
-        font-size: 15px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &__rating {
         padding: 6.5px;
-        background: #F4F8FF;
+        background: #EBF1FB;
         border-radius: 9px;
         display: inline-flex;
         justify-content: center;
@@ -220,19 +270,17 @@
         font-size: 13px;
     }
 
-    &__stars {
-    }
+    &__stars {}
 
     &__date {
+        font-size: 11px;
+        color: $violet;
     }
 
-    &__skills-rating {
-    }
+    &__skills-rating {}
 
     &__content {
-        padding: 15px;
-        background: #F4F8FF;
-        border-radius: 10px;
+        @include adaptiv-value("margin-bottom", 30, 20, 1);
         font-size: 15px;
         line-height: 150%;
     }
@@ -240,84 +288,97 @@
     &__button {
         padding: 15px;
         color: #3D3D3D;
-        &:hover {
-            color: #fff;
+    }
+
+    &__thumbs-wrapper {
+        overflow: hidden;
+    }
+
+    &__thumbs {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        overflow: auto;
+    }
+
+    &__image {
+        border-radius: 7px;
+        position: relative;
+        padding-bottom: 80px;
+        display: block;
+        width: 100%;
+        flex: 0 1 25%;
+        @media(max-width:600px) {
+            flex: 0 0 120px;
+        }
+        img {   
+            border-radius: 7px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
+
 .skills-rating {
-    @include adaptiv-value("margin-bottom", 15, 20, 1);
+    @include adaptiv-value("margin-bottom", 35, 20, 1);
+
     &__item {
         display: flex;
         gap: 10px;
         margin-bottom: 7.5px;
+
         &:last-child {
             margin: 0;
         }
     }
 
-    &__stars {
-    }
+    &__stars {}
 
-    &__label {
-    }
+    &__label {}
 }
 
 .agent-card {
 
-    &__background {
-    }
+    &__background {}
 
-    &__number-of-reviews {
-    }
+    &__number-of-reviews {}
 
-    &__icon {
-    }
+    &__icon {}
 
-    &__text {
-    }
+    &__text {}
 
-    &__content {
-    }
+    &__content {}
 
-    &__avatar {
-    }
+    &__avatar {}
 
-    &__rating {
-    }
+    &__rating {}
 
-    &__number-of-rating {
-    }
+    &__number-of-rating {}
 
-    &__stars {
-    }
+    &__stars {}
 
-    &__name {
-    }
+    &__name {}
 
-    &__speciality {
-    }
+    &__speciality {}
 
-    &__visit {
-    }
+    &__visit {}
 
-    &__buttons {
-    }
+    &__buttons {}
 
-    &__button {
-    }
+    &__button {}
 }
+
 .social-of-agent {
 
-    &__label {
-    }
+    &__label {}
 
-    &__item {
-    }
+    &__item {}
 
-    &__icon {
-    }
+    &__icon {}
 
-    &__name {
-    }
+    &__name {}
 }

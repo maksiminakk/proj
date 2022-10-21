@@ -1,5 +1,5 @@
 .products {
-    padding: 0px 50px 40px 50px;
+    padding: 0px 50px 10px 50px;
 
     @media(max-width:992px) {
         padding: 0px 30px 30px 30px;
@@ -11,6 +11,35 @@
 
     @media(max-width:492px) {
         padding: 0px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    &__nav-item {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: 30px;
+        border: 1px solid $blue;
+        background-color: #fff;
+        border-radius: 12px;
+        transition: all 0.4s ease 0s;
+        cursor: pointer;
+        &._active {
+            background-color: $blue;
+
+            color: #fff
+        }
+        &:hover {
+            opacity: 0.9;
+        }
     }
 
     &__top {
@@ -25,7 +54,11 @@
         }
     }
 
-    &__title {}
+    &__title {
+        span {
+            color: $violet;
+        }
+    }
 
     &__button {
         display: inline-flex;
@@ -106,6 +139,7 @@
     border-radius: 12px;
     display: block;
     position: relative;
+
     &._error {
         &:before {
             content: "Объявление снято с публикации";
@@ -143,6 +177,12 @@
         padding: 5px 10px;
         border-radius: 7px;
         font-size: 12px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__images {
@@ -208,16 +248,19 @@
         top: 10px;
         right: 15px;
         z-index: 10;
+
         svg path {
             transition: all 0.4s ease 0s;
         }
+
         button {
             background: transparent;
             cursor: pointer;
             position: relative;
             z-index: 5;
         }
-        &._active + .item__comment {
+
+        &._active+.item__comment {
             opacity: 1;
             visibility: visible;
             pointer-events: all;
@@ -243,7 +286,9 @@
 
     &__video {
         min-height: 100%;
-        img, video {
+
+        img,
+        video {
             z-index: 8;
             position: absolute;
             width: 100%;
@@ -253,13 +298,15 @@
     }
 
     &__panel {
-        background: #F4F8FF;
+        background: $blue;
+        font-weight: 500;
         border-radius: 7px;
-        padding: 5px 12px;
+        padding: 5px 10px;
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     &__row {
@@ -276,6 +323,8 @@
 
         li {
             color: $violet;
+            font-weight: 500;
+            font-size: 15px;
         }
 
         &_main {
@@ -285,9 +334,7 @@
         }
     }
 
-    &__wrapper {
-
-    }
+    &__wrapper {}
 
     &__slide {
         height: 100%;
@@ -330,7 +377,8 @@
 
     &__name {
         margin-bottom: 10px;
-        font-size: 15px;
+        font-size: 17px;
+        font-weight: 500;
     }
 
     &__addres {
@@ -367,7 +415,9 @@
         align-items: center;
         color: $blue;
         transition: all 0.4s ease 0s;
-
+        font-weight: 500;
+        font-size: 12px;
+        height: 26px;
         &:hover {
             color: $violet;
         }
@@ -385,6 +435,7 @@
         top: 15px;
         right: 15px;
         cursor: pointer;
+
         &._active {
             background-image: url(../img/icons/read-heart.svg);
         }
@@ -414,10 +465,12 @@
         color: $violet;
         font-size: 15px;
         margin-bottom: 10px;
+        font-weight: 500;
     }
 
     &__all-price {
-        font-size: 22px;
+        font-size: 20px;
+        font-weight: 500;
     }
 
     &__rounding {
@@ -426,6 +479,7 @@
         align-self: flex-end;
         margin-left: 12px;
         position: relative;
+
         &:before {
             position: absolute;
             top: 45%;
@@ -438,5 +492,5 @@
         }
     }
 
-    
+
 }

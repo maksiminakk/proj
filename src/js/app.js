@@ -2712,18 +2712,21 @@ window.addEventListener("DOMContentLoaded", function () {
             //настройки миниатюрного слайдера:
             swiper: {
                 el: '.thumbs__slider',
-                slidesPerView: 4,
+                slidesPerView: 2,
                 spaceBetween: 10,
+                direction: 'horizontal',
                 breakpoints: {
                     100: {
+                        direction: 'horizontal',
                         spaceBetween: 10,
 
                     },
-                    492: {
-                        slidesPerView: 3
-                    },
-                    650: {
+                    // 1200: {
+                    //     direction: 'vertical'
+                    // },
 
+                    1210: {
+                        direction: 'vertical'
                     }
                 },
             },
@@ -2745,6 +2748,7 @@ window.addEventListener("DOMContentLoaded", function () {
         // parallax: true,
 
     });
+
 
     const mapScroll = new Swiper(".map-catalog__content-body", {
         direction: "horizontal",
@@ -2873,8 +2877,4 @@ window.addEventListener("DOMContentLoaded", function () {
             .add(myPlacemark)
             .add(myPlacemarkWithContent);
     });
-
-
-
-
 });

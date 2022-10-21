@@ -82,7 +82,10 @@
                     position: absolute;
                     top: -70px;
                     color: $violet;
-                    left: -15px;
+                    left: 65px;
+                    @media(max-width:900px) {
+                        left: -10px;
+                    }
                     @media(max-width:560px) {
                         position: static;
                         content: "Отзывов";
@@ -110,7 +113,7 @@
                     position: absolute;
                     top: -62px;
                     color: $violet;
-                    left: 0;
+                    left: 40px;
                     @media(max-width:700px) {
                         position: static;
                     }
@@ -125,18 +128,26 @@
                 @media(max-width:560px) {
                     display: none;
                 }
-                &:before {
-                    content: "Стаж";
-                    display: block;
-                    position: absolute;
-                    top: -70px;
-                    color: $violet;
-                    left: 0;
-                    @media(max-width:767px) {
-                        position: static;
-                    }
-                }
+                // &:before {
+                //     content: "Стаж";
+                //     display: block;
+                //     position: absolute;
+                //     top: -70px;
+                //     color: $violet;
+                //     left: 0;
+                //     @media(max-width:767px) {
+                //         position: static;
+                //     }
+                // }
             }
+            // @media(max-width:900px) {
+            //     .agent-item__element {
+            //         &:before {
+            //             left: 0;
+            //         }
+            //     }
+            // }
+        
         }
     }
 
@@ -170,6 +181,25 @@
     border: 1px solid #fff;
     transition: all 0.4s ease 0s;
     gap: 35px;
+    &__element {
+        flex: 0 0 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media(max-width:1100px) {
+            flex: 0 0 150px;
+        }
+        @media(max-width:900px) {
+            flex: inherit;
+        }
+        @media(max-width:700px) {
+            align-items: start;
+            justify-content: start;
+        }
+    }
+    &__element-body {
+        gap: 11px;
+    }
     &:hover {
         border: 1px solid $blue;
         .agent-item__personal {
@@ -210,6 +240,12 @@
         position: relative;
     }
 
+    &__job {
+        color: $violet;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
     &__avatar {
         position: relative;
         height: 100%;
@@ -241,7 +277,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
     }
 
     &__mobile {
@@ -259,7 +295,9 @@
         }
     }
 
-    &__number {}
+    &__number {
+        font-size: 13px;
+    }
 
     &__stars {}
 

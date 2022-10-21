@@ -40,6 +40,7 @@ body {
     align-items: center;
     border: 1px solid $blue;
     transition: all 0.4s ease 0s;
+    height: 40px;
 
     &:hover {
         background-color: #007BFC;
@@ -86,30 +87,47 @@ body {
 }
 
 .social-of-agent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
 
     &__row {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-
+        
     }
 
     &__label {
         margin-bottom: 15px;
+        font-size: 15px;
     }
 
     &__item {
-        filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.25));
         display: flex;
         align-items: center;
         gap: 6px;
         background: #FFFFFF;
         border-radius: 12px;
-        padding: 7.5px;
+        padding: 0px 30px;
+        flex: 0 1 50%;
+        justify-content: space-between;
+        height: 50px;
+        &:after {
+            content: "";
+            display: block;
+            background-image: url(../img/icons/arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 12px;
+            height: 6px;
+            flex: 0 0 12px;
+            transform: rotate(-90deg);
+        }
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     &__icon {}
@@ -189,4 +207,9 @@ body {
         bottom: 4px;
         right: 0;
     }
+}
+
+._flex-ac {
+    display: flex;
+    align-items: center;
 }
