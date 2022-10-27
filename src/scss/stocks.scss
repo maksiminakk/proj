@@ -19,6 +19,11 @@
         gap: 15px;
     }
 
+    &__row {
+        display: flex;
+        gap: 20px;
+    }
+
     &__title {
     }
 
@@ -78,6 +83,30 @@
         }
         .stock-item__text {
             color: #989BB6;
+        }
+    }
+
+    &_white {
+        background: #fff;
+        .stock-item__button {
+            color: #fff;
+        }
+        .stock-item__title {
+            color: #4E4E4E;
+        }
+        .stock-item__text {
+            color: #989BB6;
+        }
+    }
+
+    &_block {
+        max-width: 350px;
+        padding-bottom: 80px;
+        @media(max-width:1200px) {
+            max-width: 280px;
+        }
+        @media(max-width:900px) {
+           display: none;
         }
     }
 

@@ -156,7 +156,7 @@
         display: flex;
         align-items: center;
         @include adaptiv-value("gap", 40, 15, 1);
-        @include adaptiv-value("margin-right", 60, 20, 1);
+        @include adaptiv-value("margin-right", 70, 20, 1);
 
         @media(max-width:600px) {
             display: none;
@@ -193,7 +193,7 @@
         display: none;
     }
 
-    @include adaptiv-value("margin-right", 60, 20, 1);
+    @include adaptiv-value("margin-right", 70, 20, 1);
 
     &__icon {
         margin-right: 5px;
@@ -213,9 +213,11 @@
     }
 
     &__avatar {
-        @include adaptiv-value("margin-right", 15, 10, 1);
+        margin-right: 10px;
 
         svg {
+            position: relative;
+            top: 2px;
             &:hover {
                 path {
                     fill: $blue;
@@ -240,7 +242,7 @@
 
     &__link {
         color: $violet;
-
+        font-weight: 500;
         @media(max-width:600px) {
             display: none;
         }

@@ -262,13 +262,74 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
 
                                         </div>
 
                                     </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="stocks__container">
+                                <div class="stocks__body">
+                                    <div class="stocks__content">
+
+                                        <div class="stocks__row ">
+                                            <div class="stocks__slide stocks__item stock-item_block stock-item">
+                                                <div class="stock-item__body">
+                                                    <div class="stock-item__content">
+                                                        <h3 class="stock-item__title">
+                                                            Успейте взять ипотеку 
+                                                            <br> по выгодной ставке
+                                                        </h3>
+                                                        <div class="stock-item__text">
+                                                            Специальные предложения <br>
+                                                            этой весны от 11% на новостройки
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="stock-item__image">
+                                                        <img src="@img/stock-item/house.png" alt="">
+                                                    </div>
+                                                    <div class="stock-item__image-svg">
+                                                        <img src="@img/stock-item/flower.svg" alt="">
+                                                    </div>
+                                                    <div class="stock-item__number">
+                                                        -11%
+                                                    </div>
+                                                    <div class="stock-item__elipse-small">
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="stocks__slide stocks__item stock-item stock-item_block stock-item_white">
+                                                <div class="stock-item__body">
+                                                    <div class="stock-item__content">
+                                                        <h3 class="stock-item__title">
+                                                            Семейная ипотека <br> от 2,99%
+                                                        </h3>
+                                                        <div class="stock-item__text">
+                                                            Купите квартиру в ипотеку <br>
+                                                            по специальной программе для семей с детьми
+                                                        </div>
+                                                    </div>
+                                                    <div class="stock-item__family-image">
+                                                        <img src="@img/stock-item/family.png" alt="">
+                                                    </div>
+                                                    <div class="stock-item__elipse-big">
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -343,14 +404,79 @@
                                         Рассчитайте ипотеку
                                     </h3>
                                 </div>
-                                <!-- <form class="calculator__content">
-                                    <div class="calculator__row">
-                                        <div class="calculator__item">
-
+                                <div class="calculator__content">
+                                    <div class="calculator__item">
+                                        <label for="" class="calculator__label">
+                                            Срок кредита
+                                        </label>
+                                        <div class="calculator__content-body">
+                                            <div class="calculator__text _no-flex">
+                                                <span id="value-number">5</span> лет
+                                            </div>
+                                            <input id="range" type="range" min="1" max="20" value="50"
+                                                class="calculator__input">
                                         </div>
                                     </div>
-                                </form> -->
-                                <div class="calculator__content">
+                                    <div class="calculator__item">
+                                        <label for="" class="calculator__label">
+                                            Первоначальный взнос
+                                        </label>
+                                        <div class="calculator__content-body">
+                                            <div class="calculator__text">
+                                                <span id="value-age">200 000</span>
+                                                <span>15%</span>
+                                            </div>
+                                            <input id="range-age" type="range" min="200000" max="1000000" value="200000"
+                                                class="calculator__input">
+                                        </div>
+                                    </div>
+                                    <div class="calculator__item">
+                                        <div class="calculator__label">
+                                            Стоимость объекта
+                                        </div>
+                                        <div class="calculator__content-body">
+                                            <div class="calculator__text">
+                                                <span>200 000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator__item">
+                                        <div class="calculator__label">
+                                            Процентная ставка
+                                        </div>
+                                        <div class="calculator__content-body">
+                                            <div class="calculator__text">
+                                                <span>10.8%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator__item _padding">
+                                        <div class="calculator__label">
+                                            Ежемесячный платеж
+                                        </div>
+                                        <div class="calculator__text">
+                                            19 000
+                                        </div>
+                                    </div>
+                                    <div class="calculator__item">
+                                        <a href="" class="calculator__button button button_white">
+                                            График платежей
+                                        </a>
+                                    </div>
+
+                                    <div class="calculator__item">
+                                        <a href="" class="calculator__button button">
+                                            Подать заявку
+                                        </a>
+                                    </div>
+                                    <div class="calculator__item">
+                                        <a href="" class="calculator__button _icon button button_white">
+                                            Задать вопрос
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="calculator__content">
                                     <div class="calculator__row">
                                         <div class="calculator__item">
                                             <div class="calculator__label">
@@ -440,7 +566,7 @@
                                             <a href="" class="calculator__main-button button">Подать заявку</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -464,7 +590,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="tel:88005553535" class="info-card__button button">Позвонить</a>
+                                <div class="agent-card__buttons">
+                                    <a href="tel:88005553535" class="agent-card__button button _icon-number">
+                                        Телефон
+                                    </a>
+                                    <a href="" class="agent-card__button button _icon-message button_white">
+                                        Чат
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -178,6 +178,7 @@
 
 .dropdown {
     width: 100%;
+    
     &__content {
         position: relative;
     }
@@ -190,6 +191,7 @@
     &__button {
         padding: 25px 20px 10px 20px;
         border-radius: 12px;
+        height: 54px;
         &:after {
             content: "";
             position: absolute;

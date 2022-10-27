@@ -497,6 +497,22 @@ window.addEventListener("DOMContentLoaded", function () {
     const rangeSliderContribution = document.getElementById('range-slider-contribution');
     const rangeSliderKitchen = document.getElementById('range-slider-square-kitchen');
     const rangeSliderWeaving = document.getElementById('range-slider-weaving');
+
+    const slider = document.getElementById("range");
+    const output = document.getElementById("value-number");
+    const sliderAge = document.getElementById("range-age");
+    const outputAge = document.getElementById("value-age");
+    if (slider) {
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    }
+    if (sliderAge) {
+        sliderAge.oninput = function () {
+            outputAge.innerHTML = this.value;
+        }
+    }
+    
     if (rangeSlider) {
         noUiSlider.create(rangeSlider, {
             start: [1500000, 5000000],
