@@ -63,19 +63,16 @@
     &__button {
         display: inline-flex;
         align-items: center;
-        padding: 20px;
         white-space: nowrap;
-        background: #24CA8E;
-        border-radius: 25px;
+        gap: 12px;
         font-size: 15px;
-        border: 1px solid #24CA8E;
-
+        color: #24CA8E;
         &:before {
-            content: "Смотреть на карте";
-            margin-right: 15px;
-            color: #fff;
-
-            @media(max-width:600px) {
+            width: 100px;
+            content: "Поиск на карте";
+            display: block;
+            border-bottom: 1px solid #24CA8E;
+            @media(max-width:570px) {
                 display: none;
             }
         }
@@ -88,8 +85,8 @@
             width: 34px;
             height: 34px;
             flex: 0 0 34px;
+            background-color: #24CA8E;
             border-radius: 50%;
-            background-color: rgba(131, 243, 203, 0.5);
         }
 
         &:hover {

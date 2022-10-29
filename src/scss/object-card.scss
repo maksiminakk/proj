@@ -87,7 +87,7 @@
 
     &__top {
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
         margin-bottom: 10px;
         @media(max-width:600px) {
@@ -137,7 +137,7 @@
     }
 
     &__benefit {
-        padding: 0px 10px;
+        padding: 10px;
         height: 34px;
         background: #EBF1FB;
         border-radius: 7px;
@@ -148,6 +148,17 @@
         font-size: 13px;
         font-weight: 500;
         color: $blue;
+        &._main {
+            height: 100px;
+            align-items: start;
+            padding: 10px 20px 10px 10px;
+            position: relative;
+            span {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
     }
 
     &__benefit-icon {}
@@ -220,7 +231,7 @@
             padding-bottom: 40%;
         }
 
-        @media(max-width:492px) {
+        @media(max-width:767px) {
             padding-bottom: 350px;
         }
 

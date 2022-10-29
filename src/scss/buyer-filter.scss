@@ -26,6 +26,12 @@
     }
     &__title {
         @include adaptiv-value("margin-bottom", 40, 20, 1);
+        span {
+            color: $violet;
+            font-size: 13px;
+            margin-top: 5px;
+            display: block;
+        }
     }
 
     &__content {}
@@ -107,7 +113,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 15px;
-        margin-bottom:  18px;
+        margin-bottom:  7px;
     }
 
     &__label {
@@ -194,7 +200,7 @@
     padding-top: 10px;
     &__label {
         color: $violet;
-        font-size: 12px;
+        font-size: 11px;
         margin-bottom: 5px;
     }
 
@@ -219,12 +225,13 @@
         span {
             transition: all 0.4s ease 0s;
             display: flex;
+            font-size: 12px;
             align-items: center;
             justify-content: center;
             background: #FFFFFF;
             border: 1px solid #559BEF;
             border-radius: 7px;
-            padding: 5px 10px;
+            padding: 4px 10px;
             display: block;
             cursor: pointer;
             color: $black;
