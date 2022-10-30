@@ -8732,3 +8732,191 @@ body._touch .table__item._main._active .table__panel {
 .calculator__input[type=range]:focus::-webkit-slider-runnable-track {
   background-color: #559BEF;
 }
+
+.profile__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 492px) {
+  .profile__content {
+    display: block;
+    padding: 75px 15px 10px 15px;
+  }
+}
+.profile__body {
+  width: 630px;
+}
+@media (max-width: 492px) {
+  .profile__body {
+    width: 100%;
+  }
+}
+.profile__title {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+@media (max-width: 492px) {
+  .profile__title {
+    font-size: 20px;
+  }
+}
+.profile__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.profile__left {
+  flex: 0 0 90px;
+  gap: 20px;
+}
+.profile__avatar {
+  position: relative;
+}
+.profile__avatar img {
+  width: 90px;
+  height: 90px;
+  flex: 0 0 90px;
+}
+.profile__icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__icon img {
+  width: 17px;
+  height: 17px;
+}
+.profile__subname {
+  color: #7A7FAA;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.profile__name {
+  font-size: 19px;
+}
+.profile__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+@media (max-width: 492px) {
+  .profile__row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.profile__item {
+  position: relative;
+  flex: 0 1 calc(50% - 15px);
+}
+.profile__input {
+  border-radius: 12px;
+  transition: all 0.4s ease 0s;
+  height: 50px;
+  background-color: #fff;
+  padding-left: 25px;
+  width: 100%;
+  display: block;
+  font-size: 15px;
+}
+.profile__input:focus {
+  border: 1px solid #559BEF;
+  color: #559BEF;
+}
+@media (max-width: 492px) {
+  .profile__input {
+    background-color: #EBF1FB;
+  }
+}
+.profile__label {
+  color: #7A7FAA;
+  position: absolute;
+  font-size: 12px;
+  left: 25px;
+  top: 2px;
+}
+.profile__bottom {
+  padding-top: 60px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+@media (max-width: 600px) {
+  .profile__bottom {
+    padding-top: 50px;
+  }
+}
+.profile__buttons {
+  flex: 0 1 calc(50% - 15px);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+@media (max-width: 600px) {
+  .profile__buttons {
+    flex: 1 1 100%;
+  }
+}
+.profile__button:first-child {
+  flex: 0 1 40%;
+}
+.profile__button:last-child {
+  flex: 0 1 60%;
+}
+
+@media (max-width: 492px) {
+  .request-modal-new {
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.request-modal-new__label {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.request-modal-new__label span {
+  color: #FF4848;
+}
+.request-modal-new__row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.request-modal-new__row span {
+  color: #FF4848;
+}
+@media (max-width: 492px) {
+  .request-modal-new__row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.request-modal-new__item {
+  flex: 0 1 calc(50% - 10px);
+}
+.request-modal-new__item:nth-child(3) {
+  flex: 1 1 100%;
+}
+.request-modal-new__item:last-child {
+  flex: 1 1 100%;
+  padding-top: 30px;
+}
+.request-modal-new__area {
+  resize: none;
+  height: 135px;
+}
+.request-modal-new__button {
+  width: 100%;
+}

@@ -57,7 +57,7 @@
                         <div class="top-header__burger menu-icon">
                             <span></span>
                         </div>
-                        <a href="/index.html" class="top-header__mobile-logo">
+                        <a href="#request-modal" class="top-header__mobile-logo popup-link">
                             <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -157,7 +157,7 @@
         <div class="header__bottom bottom-header menu-body">
             <div class="bottom-header__container container">
                 <div class="bottom-header__body">
-                    <a href="/index.html" class="bottom-header__logo">
+                    <a href="#request-modal-2" class="bottom-header__logo popup-link">
                         <img src="img/logos/logo.svg" alt="">
                     </a>
                     <button class="bottom-header__close">
@@ -1313,7 +1313,7 @@
                             Иван Петров
                         </div>
 
-                        <a href="/profile-options.html" class="account__profile-link">Редактировать профиль</a>
+                        <a href="#profile-popup" class="account__profile-link popup-link">Редактировать профиль</a>
                     </div>
                 </div>
                 <nav class="account__body">
@@ -2710,6 +2710,113 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<div id="profile-popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content profile__content">
+            <div class="popup__close close-popup popup__text-close">
+                <img src="img/icons/close-border.svg" alt="">
+                <span>Закрыть</span>
+            </div>
+            <div class="profile__body">
+                <div class="profile__title">
+                    Настройки личного кабинета
+                </div>
+                <div class="profile__top">
+                    <div class="profile__left">
+                        <div class="profile__avatar">
+                            <img src="img/agent-card/aegnt.png" alt="">
+                            <a href="" class="profile__icon">
+                                <img src="img/icons/camera-2.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="profile__right">
+                        <div class="profile__subname">
+                            Имя,  фамилия 
+                        </div>
+                        <div class="profile__name">
+                            Иван Петров
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="profile__row">
+                    <div class="profile__item">
+                        <input type="text" class="profile__input">
+                        <label for="" class="profile__label">Фамилия </label>
+                    </div>
+                    <div class="profile__item">
+                        <input type="text" class="profile__input">
+                        <label for="" class="profile__label">Имя </label>
+                    </div>
+                    <div class="profile__item">
+                        <input type="tel" class="profile__input">
+                        <label for="" class="profile__label tel">Телефон </label>
+                    </div>
+                    <div class="profile__item">
+                        <input type="tel" class="profile__input">
+                        <label for="" class="profile__label tel">WhatsApp </label>
+                    </div>
+                    <div class="profile__item">
+                        <input type="password" class="profile__input">
+                        <label for="" class="profile__label">Пароль </label>
+                    </div>
+                    <div class="profile__item">
+                        <input type="password" class="profile__input">
+                        <label for="" class="profile__label">Повтор пароля </label>
+                    </div>
+                </form>
+                <div class="profile__bottom">
+                    <div class="profile__buttons">
+                        <a href="" class="profile__button button button_white">
+                            Удалить
+                        </a>
+                        <a href="" class="profile__button button ">
+                            Сохранить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="request-modal-2" class="popup">
+    <div class="popup__body request-modal-new">
+        <div class="popup__content profile__content request-modal-new__content">
+            <div class="popup__close close-popup popup__text-close">
+                <img src="img/icons/close-border.svg" alt="">
+                <span>Закрыть</span>
+            </div>
+            <div class="profile__body">
+                <div class="profile__title">
+                    Обращение
+                </div>
+                <div class="request-modal-new__label">
+                    <span>*</span> - обязательное поле
+                </div>
+                <form action="" class="request-modal-new__row">
+                    <div class="profile__item request-modal-new__item">
+                        <input type="text" required class="profile__input">
+                        <label for="" class="profile__label">Имя <span>*</span></label>
+                    </div>
+                    <div class="profile__item request-modal-new__item">
+                        <input required type="tel" class="profile__input tel">
+                        <label for="" class="profile__label">Номер телефона <span>*</span></label>
+                    </div>
+                    <div class="profile__item request-modal-new__item">
+                        <textarea required name="" id="" cols="30" rows="10" class="profile__input request-modal-new__area"></textarea>
+                        <label for="" class="profile__label tel">Сообщение <span>*</span></label>
+                    </div>
+                    <div class="profile__item request-modal-new__item">
+                        <button type="submit" class="request-modal-new__button button">Отправить</button>
+                    </div>
+                </form>
+                
             </div>
         </div>
     </div>

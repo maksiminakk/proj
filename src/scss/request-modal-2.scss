@@ -1,0 +1,51 @@
+
+.request-modal-new {
+    @media(max-width:492px) {
+        padding-top: 100px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &__content {
+        
+    }
+    &__label {
+        font-size: 13px;
+        margin-bottom: 20px;
+        span {
+            color: #FF4848;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        span {
+            color: #FF4848;
+        }
+        @media(max-width:492px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        flex: 0 1 calc(50% - 10px);
+        &:nth-child(3) {
+            flex: 1 1 100%;
+        }
+        &:last-child {
+            flex: 1 1 100%;
+            padding-top: 30px;
+        }
+    }
+
+    &__area {
+        resize: none;
+        height: 135px;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}
+
