@@ -53,7 +53,12 @@
     &__title {
         font-weight: 400;
         @include adaptiv-value("font-size", 25, 20, 1);
-        @include adaptiv-value("margin-bottom", 50, 35, 1);
+        @include adaptiv-value("margin-bottom", 70, 35, 1);
+    }
+
+    &__sticky {
+        position: sticky;
+        top: 50px;
     }
 
     &__content {
@@ -79,13 +84,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 15px;
+        margin-right: 25px;
     }
 
     &__number {
         width: 30px;
         flex: 0 0 30px;
         height: 30px;
+        font-weight: 500;
         background-color: #F4F8FF;
         border-radius: 50%;
         display: inline-flex;
@@ -121,6 +127,7 @@
         flex-direction: row-reverse;
         justify-content: start;
         gap: 15px;
+        
         input {
             display: none;
         }
@@ -128,22 +135,23 @@
 }
 
 .form-rating {
-
+    margin-bottom: 20px;
+    &:last-child {
+        margin: 0;
+    }
     &__label {
         margin-bottom: 15px;
+        font-size: 23px;
     }
 
     &__field {
         @include adaptiv-value("width", 440, 280, 1);
         max-height: 100px;
         resize: none;
+        
         background-color: #EBF1FB;
         border-radius: 10px;
         padding: 15px 10px;
-        @include adaptiv-value("margin-bottom", 70, 35, 1);
-        &::placeholder {
-            color: $violet;
-        }
         @media(max-width:992px) {
             width: 350px;
         }
@@ -152,10 +160,37 @@
         }
     }
 
+    &__file-item {
+        position: relative;
+    }
+
+    &__file-input {
+        display: block;
+        position: absolute;
+        font-size: 0;
+        opacity: 0;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__file-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        flex: 0 0 70px;
+        background-color: #EBF1FB;
+        border-radius: 0px 10px 10px 10px ;
+    }
+
     &__buttons {
         display: flex;
-        gap: 10px;
-        
+        gap: 30px;
+        margin-top: 30px;
         @media(max-width:492px) {
             flex-direction: column;
         }
@@ -163,9 +198,16 @@
 
     &__button {
         width: 100%;
+        
         padding: 20px 0px;
         @media(max-width:492px) {
             width: 100%;
+        }
+        &:first-child {
+            flex: 0 1 40%;
+        }
+        &:last-child {
+            flex: 0 1 60%;
         }
     }
 }
@@ -272,6 +314,7 @@
 
 .rating-item__stars label{
     font-size: 24px;
+    cursor: pointer;
     color: #fff;
     text-shadow: -1px 0 #FFDA16, 0 1px #FFDA16, 1px 0 #FFDA16, 0 -1px #FFDA16;
     transition: all 0.4s ease;
