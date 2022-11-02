@@ -26,84 +26,14 @@
 
     &__item {
         position: relative;
+    }
 
-        &:first-child {
-            &:before {
-                content: "Фамилия ";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
-
-        &:nth-child(2) {
-            &:before {
-                content: "Имя";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
-
-        &:nth-child(3) {
-            &:before {
-                content: "Телефон";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
-
-        &:nth-child(4) {
-            &:before {
-                content: "WhatsApp";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
-
-        &:nth-child(5) {
-            &:before {
-                content: "Пароль";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
-
-        &:nth-child(6) {
-            &:before {
-                content: "Повтор пароля";
-                display: block;
-                position: absolute;
-                font-size: 10px;
-                color: $violet;
-                z-index: 2;
-                top: 5px;
-                left: 20px;
-            }
-        }
+    &__label {
+        position: absolute;
+        top: 3px;
+        left: 25px;
+        color: $violet;
+        font-size: 12px;
     }
 
     &__input {
@@ -113,11 +43,47 @@
         background: #FFFFFF;
         border: 1px solid #D5D5D5;
         border-radius: 12px;
-        padding-left: 20px;
+        padding-left: 25px;
     }
 
     &__button {
         height: 45px;
         width: 100%;
+    }
+}
+
+
+.registration-menu {
+    padding: 55px 65px 25px 25px;
+    &__title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 130%;
+        color: $violet;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        margin-bottom: 20px;
+        height: 50px;
+    }
+
+    &__label {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $violet;
+    }
+
+    &__line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(122, 127, 170, 0.5);
     }
 }
